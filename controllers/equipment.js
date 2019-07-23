@@ -1,8 +1,8 @@
 var equipment = angular.module("equipments",['equipments-module']);
-	equipment.controller("equipmentCtrl",function($scope,equipments){
+	equipment.controller("equipmentCtrl",function($scope,stocks){
 
 		formHolder = {};
-		$scope.myEquipment = equipments;
+		$scope.myEquipment = stocks;
 		$scope.myEquipment.start($scope);
 
 
