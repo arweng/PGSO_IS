@@ -99,7 +99,7 @@
                         	<li class="text-muted menu-title">Navigation</li>
 							<li class="has_sub">
                                 <li><a href="index.php" class="waves-effect active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-                                <li><a href="Equipments.html" class="waves-effect"><i class="ti-file"></i><span> Equipment(s) </span></a></li>
+                                <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment(s) </span></a></li>
                             </li>
                         </ul>
                         <div class="clearfix"></div>

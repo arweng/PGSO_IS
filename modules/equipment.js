@@ -23,6 +23,7 @@ function stocks(){
 	},function onError(res){
 
 	});
+
 		$('#content').html('Loading...');	
 			$('#content').load('lists/stocks.html', function() {
 				$timeout(function() { $compile($('#content')[0])(scope); },100);								
@@ -33,7 +34,7 @@ function stocks(){
 					});	
 				},200);
 
-}
+};
 };
 
 };

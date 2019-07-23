@@ -12,7 +12,7 @@
         <title>Ubold - Responsive Admin Dashboard Template</title>
 
         <!--Morris Chart CSS -->
-		 <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+         <link rel="stylesheet" href="assets/plugins/morris/morris.css">
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@
         <script src="assets/js/modernizr.min.js"></script>
     </head>
 
-    <body class="fixed-left" ng-app="equipments" ng-controller="equipmentCtrl" account-profile>
+    <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -58,9 +58,9 @@
                             </div>
 
                             <form role="search" class="navbar-left app-search pull-left hidden-xs">
-			                     <input type="text" placeholder="Search..." class="form-control">
-			                     <a href=""><i class="fa fa-search"></i></a>
-			                </form>
+                                 <input type="text" placeholder="Search..." class="form-control">
+                                 <a href=""><i class="fa fa-search"></i></a>
+                            </form>
 
 
                             <ul class="nav navbar-nav navbar-right pull-right">
@@ -96,10 +96,10 @@
                     <div id="sidebar-menu">
                         <ul>
 
-                        	<li class="text-muted menu-title">Navigation</li>
-							<li class="has_sub">
+                            <li class="text-muted menu-title">Navigation</li>
+                            <li class="has_sub">
                                 <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a></li>
-                                <li><a href="Equipments.html" class="waves-effect active"><i class="ti-file"></i><span> Equipment(s) </span></a></li>
+                                <li><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span> Equipment(s) </span></a></li>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -122,18 +122,18 @@
                                 <p class="text-muted page-title-alt">Welcome to System</p>
                             </div>
                         </div>
-						
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="card-box">
-									<div class="row">
-										<div class="col-md-6">
-											<div class = "a_content" id = "a_content"> </div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div><!-- row -->
+                        
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class = "a_content" id="a_content"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- row -->
                     </div> <!-- container -->
                 </div> <!-- content -->
 
@@ -178,14 +178,15 @@
         <script src="assets/pages/jquery.dashboard.js"></script>
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-		<script src="assets/js/bootbox.min.js"></script>
-		
-		<!-- Angular  -->
-		<script src="angular/angular.min.js"></script>
-		<script src="modules/fullscreen.js"></script>
-		<script src="modules/bootstrap-modal.js"></script>
-		<script src="modules/equipment.js"></script>
-		<script src="controllers/equipment.js"></script>
+        <script src="assets/js/bootbox.min.js"></script>
+        
+        <!-- Angular  -->
+        <script src="angular/angular.min.js"></script>
+        <script src="modules/fullscreen.js"></script>
+        <script src="modules/bootstrap-modal.js"></script>
+        <script src="modules/account.js"></script>
+        <script src="modules/equipment.js"></script>
+        <script src="controllers/dashboard.js"></script>
 
 
 
