@@ -42,7 +42,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="85" height="85"></i></span></a>
+                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@
                         	<li class="text-muted menu-title">Navigation</li>
 							<li class="has_sub">
                                 <li><a href="index.php" class="waves-effect active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-                                <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment(s) </span></a></li>
+                                <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li>
                             </li>
                         </ul>
                         <div class="clearfix"></div>

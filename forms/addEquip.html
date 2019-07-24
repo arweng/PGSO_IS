@@ -1,0 +1,13 @@
+<section>
+	<div ng-repeat="u in input.multiple">
+		Property No.	<input type="text" name="property_no{{index}}" ng-model="u.property_no">
+		Desciption		<input type="text" name="desciption{{index}}" ng-model="u.description">
+		Model			<input type="text" name="model{{index}}" ng-model="u.model">
+						<button ng-click="myEquipment.multiple.remove(this)">Remove</button>
+						<hr>
+	</div>
+	<div id="action" align="right">
+		<button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipSave(this)">Save</button>
+		<button>Cancel</button>
+	</div>
+</section>

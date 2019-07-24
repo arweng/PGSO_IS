@@ -1,0 +1,34 @@
+<div class="panel panel-border panel-primary">
+  	<br>
+  	<div id="datatable-editable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+        <div class="row">
+            <div class="dataTables_length" id="datatable-editable_length">
+                <div class="panel-body">
+                    <table id="sample" class="table table-striped m-0">
+	                    <thead>
+	                        <tr role="row">
+	                            <th class='sorting_1'>Stock ID</th>
+	                            <th>Property No</th>
+	                            <th>Description</th>
+	                            <th>Model</th>
+	                            <th>&nbsp;Action(s)</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr ng-repeat="u in inputs " class="gradeC odd" role="row">
+	                            <td>{{u.id}}</td>
+	                            <td>{{u.property_no}}</td>
+	                            <td>{{u.description}}</td>
+	                            <td>{{u.model}}</td>
+		                        <td class="actions">
+		                                <a class="on-default edit-row"> <button ng-click='test_users.user(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-pencil"></i> </button></a>
+		                                <a class="on-default remove-row"> <button ng-click='test_users.delete(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-trash-o"></i> </button></a>
+		                        </td>
+	                        </tr>
+	                    </tbody>
+                	</table>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>

@@ -31,7 +31,7 @@
         <script src="assets/js/modernizr.min.js"></script>
     </head>
 
-    <body class="fixed-left" ng-app="dashboard" ng-controller="dashboardCtrl" account-profile>
+    <body class="fixed-left" ng-app="equipments" ng-controller="equipmentCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -42,7 +42,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="85" height="85"></i></span></a>
+                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -99,7 +99,7 @@
                             <li class="text-muted menu-title">Navigation</li>
                             <li class="has_sub">
                                 <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a></li>
-                                <li><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span> Equipment(s) </span></a></li>
+                                <li><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span> Equipment </span></a></li>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -118,7 +118,7 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="page-title">Dashboard</h4>
+                                <h4 class="page-title">Equipment</h4>
                                 <p class="text-muted page-title-alt">Welcome to System</p>
                             </div>
                         </div>
@@ -126,6 +126,12 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box">
+                                    <div>
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)" ng-disabled="btns.add">Add</button>
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" ng-disabled="btns.multiple">Add Multiple</button>
+                                    </div>
+                                    <div id="content"></div>
+                                    <!-- INFORMATION HERE -->
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class = "a_content" id="a_content"> </div>
@@ -186,7 +192,7 @@
         <script src="modules/bootstrap-modal.js"></script>
         <script src="modules/account.js"></script>
         <script src="modules/equipment.js"></script>
-        <script src="controllers/dashboard.js"></script>
+        <script src="controllers/equipment.js"></script>
 
 
 
