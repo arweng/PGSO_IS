@@ -36,6 +36,7 @@ function stocks(){
 
 			url:'handlers/equipment.php',
 			method:'GET',
+			
 
 		}).then(function onSuccess(res){
 
@@ -90,14 +91,28 @@ function stocks(){
 			method: "POST",
 			data: scope.input.multiple
 		}).then(function onSuccess(res){
-
+			scope.input = {};
+			scope.input.id = 0;
 			alert("Succccccccess");
+
 		}, function onError(res){
 
 			//error
 		});
 		
 	}
+	self.delete=function(scope,input){
+		$http({
+			url:"handlers/equipDelete.php",
+			method:'POST',
+			data:{scope:[input.id]}
+
+		}).then(function onSuccess(res){
+			self.listOfEquipment(scope);
+		}, function onError(res){
+
+		});
+	};
 
 	self.multiple = {
 		
@@ -117,6 +132,12 @@ function stocks(){
 				_condition: '',
 				supplier: '',
 				remarks: '',
+
+			}).then( function success(res){
+
+				scope.inputs = res.data;
+
+			}, function error(res){
 
 			});
 

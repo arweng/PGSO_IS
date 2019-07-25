@@ -10,7 +10,7 @@ $equipment = $con->getData("SELECT id, property_no, description, model, acquisit
 
 foreach ($equipment as $i => $equipments) {
 	
-	$equipment[$i]['acquisition_dates'] = date("M j, Y",strtotime($equipments['acquisition_date']));
+	$equipment[$i]['_date'] = date("M j, Y",strtotime($equipments['acquisition_date']));
 	
 };
 

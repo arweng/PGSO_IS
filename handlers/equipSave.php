@@ -8,12 +8,11 @@ $con = new pdo_db('equipment');
 
 $_POST['acquisition_date'] = date("Y-m-d",strtotime($_POST['acquisition_date']));
 
-if($_POST['id']>0){
+if ($_POST['id']>0) {
 
 	$_POST['system_log'] = "CURRENT_TIMESTAMP";
 	$con->updateData($_POST,'id');
 	
-
 } else {
 
 	unset($_POST['id']);
