@@ -28,6 +28,7 @@ function stocks(){
 }
 
 	self.listOfEquipment = function(scope){ 
+		if (scope.$id>2) scope = scope.$parent;	
 
 		scope.btns.add = false;
 		scope.btns.multiple = true;
@@ -36,7 +37,7 @@ function stocks(){
 
 			url:'handlers/equipment.php',
 			method:'GET',
-			
+
 
 		}).then(function onSuccess(res){
 
@@ -102,6 +103,7 @@ function stocks(){
 		
 	}
 	self.delete=function(scope,input){
+
 		$http({
 			url:"handlers/equipDelete.php",
 			method:'POST',

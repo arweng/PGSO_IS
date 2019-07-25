@@ -6,6 +6,6 @@ require_once '../db.php';
 
 $con = new pdo_db("equipment");
 
-$delete = $con->deleteData(array("id"=>implode(",",$_POST['id'])));
+$delete = $con->deleteData(array('id'=>implode(",",$_POST['id'])));
 
 ?>
