@@ -85,7 +85,7 @@ function stocks(){
 
 	self.equipSave = function(scope){
 
-
+		if (scope.$id > 2) scope = scope.$parent;
 		$http({
 
 			url: "handlers/equipSave.php",
