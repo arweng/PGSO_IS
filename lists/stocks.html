@@ -11,15 +11,33 @@
 	                            <th>Property No</th>
 	                            <th>Description</th>
 	                            <th>Model</th>
+	                            <th>Acquisition</th>
+	                            <th>Acquisition Date</th>
+	                            <th>Acquisition Cost</th>
+	                            <th>Serial</th>
+	                            <th>Inventory Tag</th>
+	                            <th>Classification</th>
+	                            <th>Condition</th>
+	                            <th>Supplier</th>
+	                            <th>Remarks</th>
 	                            <th>&nbsp;Action(s)</th>
 	                        </tr>
 	                    </thead>
 	                    <tbody>
-	                        <tr ng-repeat="u in inputs " class="gradeC odd" role="row">
+	                        <tr ng-repeat="u in inputs track by $index" class="gradeC odd" role="row">
 	                            <td>{{u.id}}</td>
 	                            <td>{{u.property_no}}</td>
 	                            <td>{{u.description}}</td>
 	                            <td>{{u.model}}</td>
+	                            <td>{{u.acquisition}}</td>
+	                            <td>{{u.acquisition_date}}</td>
+	                            <td>{{u.acquisition_cost}}</td>
+	                            <td>{{u._serial}}</td>
+	                            <td>{{u.inventory_tag}}</td>
+	                            <td>{{u.classification}}</td>
+	                            <td>{{u._condition}}</td>
+	                            <td>{{u.supplier}}</td>
+	                            <td>{{u.remarks}}</td>
 		                        <td class="actions">
 		                                <a class="on-default edit-row"> <button ng-click='test_users.user(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-pencil"></i> </button></a>
 		                                <a class="on-default remove-row"> <button ng-click='test_users.delete(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-trash-o"></i> </button></a>

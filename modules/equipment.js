@@ -40,6 +40,7 @@ function stocks(){
 		}).then(function onSuccess(res){
 
 			scope.inputs = res.data;
+			
 		},function onError(res){
 
 			//error
@@ -100,13 +101,23 @@ function stocks(){
 
 	self.multiple = {
 		
-		add: function(scope) {
-
+		add: function(scope,input) {
+			
 			scope.input.multiple.push({
 				id: 0,
 				property_no: '',
 				description: '',
-				model: ''
+				model: '',
+				acquisition: '',
+				acquisition_date : new Date(scope.input.acquisition_date),
+				acquisition_cost: '',
+				_serial: '',
+				inventory_tag: '',
+				classification: '',
+				_condition: '',
+				supplier: '',
+				remarks: '',
+
 			});
 
 			console.log(scope.input.multiple);
