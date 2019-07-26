@@ -128,8 +128,12 @@
                                 <div class="card-box">
                                     <div>
                                         <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)" ng-disabled="btns.add">Add</button>
-                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" ng-disabled="btns.multiple">Add Multiple</button>
+
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button>
+                                        
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button>
                                     </div>
+                                    <br>
                                     <div id="content"></div>
                                     <!-- INFORMATION HERE -->
                                     <div class="row">
@@ -148,10 +152,6 @@
                 </footer>
 
             </div>
-
-
-           
-
         </div>
         <!-- END wrapper -->
 

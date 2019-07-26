@@ -1,42 +1,42 @@
 <section>
 	<div class="row" id="section">
-		<div ng-repeat="u in input.multiple">
+		<!-- <div ng-repeat="u in input.multiple"> -->
 			<div class="col-md-6">
 				<form class="form-horizontal" role="form">
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Property Number </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="property_no{{index}}" ng-model="u.property_no">
+		                    <input type="text" class="form-control" ng-model="input.property_no">
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label" >Description </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="description{{index}}" ng-model="u.description">
+		                    <input type="text" class="form-control" ng-model="input.description">
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Model </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="model{{index}}" ng-model="u.model">
+		                    <input type="text" class="form-control" ng-model="input.model">
 		                </div>
 		            </div>                     
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Acquisition </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="acquisition{{index}}" ng-model="u.acquisition">
+		                   <input type="text" class="form-control" ng-model="input.acquisition">
 		                </div>
 		            </div>                                                                        
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Acquisition Date </label>
 		                <div class="col-md-8">
-		                   <input type="date" class="form-control" name="acquisition_date{{index}}" ng-model="u.acquisition_date">
+		                   <input type="date" class="form-control" ng-model="input.acquisition_date">
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Acquisition Cost </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="acquisition_cost{{index}}" ng-model="u.acquisition_cost">
+		                   <input type="text" class="form-control" ng-model="input.acquisition_cost">
 		                </div>
 		            </div>
                 </form>
@@ -48,49 +48,49 @@
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Serial </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="_serial{{index}}" ng-model="u._serial">
+		                    <input type="text" class="form-control" ng-model="input._serial">
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label" >Inventory Tag </label>
 		                <div class="col-md-8">
-		                    <input type="number" class="form-control" name="inventory_tag{{index}}" ng-model="u.inventory_tag">
+		                    <input type="number" class="form-control" ng-model="input.inventory_tag">
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Classification </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="classification{{index}}" ng-model="u.classification">
+		                    <input type="text" class="form-control" ng-model="input.classification">
 		                </div>
 		            </div>
 		                                     
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Condition </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="_condition{{index}}" ng-model="u._condition">
+		                   <input type="text" class="form-control" ng-model="input._condition">
 		                </div>
 		            </div>                                                                        
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Supplier </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="supplier{{index}}" ng-model="u.supplier">
+		                   <input type="text" class="form-control" ng-model="input.supplier">
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Remarks </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="remarks{{index}}" ng-model="u.remarks">
+		                   <input type="text" class="form-control" ng-model="input.remarks">
 		                </div>
 		            </div>
 		        </form>
 		        <hr>
 			</div>
-		</div>
+		<!-- </div> -->
 	</div>
 	<section>
 		<div align="right">
 	    	<br><br>
-			<button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipSave(this)" ng-disabled="btns.save">Save</button>
+			<button class="btn btn-info waves-effect waves-light btn-sm" id="save" ng-click="myEquipment.equipSave(this)" ng-disabled="btns.save">Save</button>
 			<button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.cancel(this)">Cancel</button>
 		</div>
 	</section>
