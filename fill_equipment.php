@@ -97,10 +97,18 @@
 
                             <li class="text-muted menu-title">Navigation</li>
                             <li class="has_sub">
-                                <li><a href="index.php" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
+                                <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Fill in Equipment</a></li>
+                                    </ul>
                                 </li>
-                                <li class="has_sub"><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span>Equipment</span></a>   
-                                </li>
+                                <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li>
+                            </li>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect active"><i class="ti-paint-bucket"></i> <span> UI Kit </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="fill_equipment.php">Fill in Equipment</a></li>
+                                </ul>
                             </li>
                         </ul>
                         <div class="clearfix"></div>

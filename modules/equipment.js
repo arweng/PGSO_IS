@@ -16,7 +16,7 @@ function stocks(){
 		scope.btns = {
 			add: true,			// false: Button enabled.
 			multiple: true,
-			save: true
+
 		};
 
 		self.listOfEquipment(scope);
@@ -63,7 +63,6 @@ function stocks(){
 
 		scope.btns.add = true;
 		scope.btns.multiple = false;
-		scope.btns.save = true;
 
 		console.log(scope);
 
@@ -72,7 +71,6 @@ function stocks(){
 		$("#content").load("forms/addEquip.html", function() {
 
 			$compile($("#content")[0])(scope);
-
 
 		});
 
@@ -84,14 +82,17 @@ function stocks(){
 		if (scope.$id > 2) scope = scope.$parent;
 
 		var multingle;
+		scope.btns.add = true;
+		scope.btns.multiple = false;
 
-		if (scope.input.multiple){
+		if(scope.input.multiple){
 
 			multingle = scope.input.multiple;
 		} else {
 
 			multingle = scope.input;
 		}
+
 
 		$http({
 
@@ -114,7 +115,6 @@ function stocks(){
 	self.equipEdit = function(scope, input){
 
 		scope.btns.add = true;
-		scope.btns.save = false;
 
 		$http({
 
@@ -164,7 +164,7 @@ function stocks(){
 	
 		add: function(scope,input) {
 
-			scope.btns.save = false;
+
 
 			scope.input.multiple.push({
 				id: 0,
@@ -180,7 +180,6 @@ function stocks(){
 				_condition: '',
 				supplier: '',
 				remarks: ''
-
 
 			});
 
