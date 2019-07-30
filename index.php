@@ -57,10 +57,10 @@
                                 <span class="clearfix"></span>
                             </div>
 
-                            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                          <!--   <form role="search" class="navbar-left app-search pull-left hidden-xs">
 			                     <input type="text" placeholder="Search..." class="form-control">
 			                     <a href=""><i class="fa fa-search"></i></a>
-			                </form>
+			                </form> -->
 
 
                             <ul class="nav navbar-nav navbar-right pull-right">
@@ -124,8 +124,23 @@
                                     <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
                                     <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
                                     <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
+
                                 </ul>
                             </li>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Maintenance </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:;">Brand</a></li>
+                                    <li><a href="javascript:;">Classification</a></li>
+                                    <li><a href="javascript:;">Model</a></li>
+                                    <li><a href="javascript:;">Personnel</a></li>
+                                    <li><a href="javascript:;">Department</a></li>
+                                    <li><a href="javascript:;">Division</a></li>
+                                    <li><a href="javascript:;">Security</a></li>
+                                    <li><a href="javascript:;">Type</a></li>
+                                    <li><a href="javascript:;">Supplier</a></li>
+                                    <li><a href="javascript:;">Accountable Officer</a></li>
+                                </ul>
                         </ul>
                         <div class="clearfix"></div>
                     </div>

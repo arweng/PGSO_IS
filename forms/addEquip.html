@@ -1,45 +1,55 @@
 <section>
 	<div class="row" id="section">
 		<div ng-repeat="u in input.multiple">
-			<div class="col-md-6">
-				<form class="form-horizontal" role="form">
-		            <div class="form-group">
-		                <label class="col-md-4 control-label">Property Number </label>
-		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="property_no{{index}}" ng-model="u.property_no">
-		                </div>
-		            </div>
-		            <div class="form-group">
-		                <label class="col-md-4 control-label" >Description </label>
-		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="description{{index}}" ng-model="u.description">
-		                </div>
-		            </div>
-		            <div class="form-group">
-		                <label class="col-md-4 control-label">Model </label>
-		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="model{{index}}" ng-model="u.model">
-		                </div>
-		            </div>                     
-		            <div class="form-group">
-		                <label class="col-md-4 control-label">Acquisition </label>
-		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="acquisition{{index}}" ng-model="u.acquisition">
-		                </div>
-		            </div>                                                                        
-		            <div class="form-group">
-		                <label class="col-md-4 control-label">Acquisition Date </label>
-		                <div class="col-md-8">
-		                   <input type="date" class="form-control" name="acquisition_date{{index}}" ng-model="u.acquisition_date">
-		                </div>
-		            </div>
-		            <div class="form-group">
-		                <label class="col-md-4 control-label">Acquisition Cost </label>
-		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="acquisition_cost{{index}}" ng-model="u.acquisition_cost">
-		                </div>
-		            </div>
-                </form>
+			<form name="formHolder.input" id="formHolder.input" class="form-horizontal" role="form">
+				<div class="col-md-6">
+					<!-- <form > -->
+			            <div class="form-group">
+			                <label class="col-md-4 control-label">Property Number </label>
+			                <div class="col-md-8">
+			                    <input type="text" class="form-control" name="property_no{{index}}" ng-model="u.property_no" ng-class="{'parsley-error': formHolder.input.property_no.$touched && formHolder.input.property_no.$invalid}" required>
+			                    <span class="text-danger" ng-show="formHolder.input.property_no.$touched && formHolder.input.property_no.$invalid"> Please Indicate Property Number</span>
+
+			                </div>
+		            	</div>
+			            <div class="form-group">
+			                <label class="col-md-4 control-label" >Description </label>
+			                <div class="col-md-8">
+			                    <input type="text" class="form-control" name="description{{index}}" ng-model="u.description" ng-class="{'parsley-error': formHolder.input.description.$touched && formHolder.input.description.$invalid}" required>
+			                    <span class="text-danger" ng-show="formHolder.input.description.$touched && formHolder.input.description.$invalid"> Please Indicate Description </span>
+
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <label class="col-md-4 control-label">Model </label>
+			                <div class="col-md-8">
+			                    <input type="text" class="form-control" name="model{{index}}" ng-model="u.model" ng-class="{'parsley-error': formHolder.input.model.$touched && formHolder.input.model.$invalid}" required>
+			                    <span class="text-danger" ng-show="formHolder.input.model.$touched && formHolder.input.model.$invalid"> Please Indicate Model </span>
+
+			                </div>
+			            </div>                     
+			            <div class="form-group">
+			                <label class="col-md-4 control-label">Acquisition </label>
+			                <div class="col-md-8">
+			                   <input type="text" class="form-control" name="acquisition{{index}}" ng-model="u.acquisition" ng-class="{'parsley-error': formHolder.input.acquisition.$touched && formHolder.input.acquisition.$invalid}" required>
+			                   <span class="text-danger" ng-show="formHolder.input.acquisition.$touched && formHolder.input.acquisition.$invalid"> Please Indicate Acquisition </span>
+			                </div>
+			            </div>                                                                        
+			            <div class="form-group">
+			                <label class="col-md-4 control-label">Acquisition Date </label>
+			                <div class="col-md-8">
+			                   <input type="date" class="form-control" name="acquisition_date{{index}}" ng-model="u.acquisition_date" ng-class="{'parsley-error': formHolder.input.date.$touched && formHolder.input.date.$invalid}" required>
+			                   <span class="text-danger" ng-show="formHolder.input.date.$touched && formHolder.input.date.$invalid"> Please Indicate Date </span>
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <label class="col-md-4 control-label">Acquisition Cost </label>
+			                <div class="col-md-8">
+			                   <input type="text" class="form-control" name="acquisition_cost{{index}}" ng-model="u.acquisition_cost" ng-class="{'parsley-error': formHolder.input.acquisition_cost.$touched && formHolder.input.acquisition_cost.$invalid}" required>
+			                   <span class="text-danger" ng-show="formHolder.input.acquisition_cost.$touched && formHolder.input.acquisition_cost.$invalid"> Please Indicate Acquisition Cost</span>
+			                </div>
+			            </div>
+                	<!-- </form> -->
                 <hr>
             </div> 
 			
@@ -48,44 +58,52 @@
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Serial </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="_serial{{index}}" ng-model="u._serial">
+		                    <input type="text" class="form-control" name="_serial{{index}}" ng-model="u._serial" ng-class="{'parsley-error': formHolder.input._serial.$touched && formHolder.input._serial.$invalid}" required>
+		                    <span class="text-danger" ng-show="formHolder.input._serial.$touched && formHolder.input._serial.$invalid"> Please Indicate Serial</span>
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label" >Inventory Tag </label>
 		                <div class="col-md-8">
-		                    <input type="number" class="form-control" name="inventory_tag{{index}}" ng-model="u.inventory_tag">
+		                    <input type="number" class="form-control" name="inventory_tag{{index}}" ng-model="u.inventory_tag" ng-class="{'parsley-error': formHolder.input.inventory_tag.$touched && formHolder.input.inventory_tag.$invalid}" required>
+		                    <span class="text-danger" ng-show="formHolder.input.inventory_tag.$touched && formHolder.input.inventory_tag.$invalid"> Please Indicate Inventory Tag</span>
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Classification </label>
 		                <div class="col-md-8">
-		                    <input type="text" class="form-control" name="classification{{index}}" ng-model="u.classification">
+		                    <input type="text" class="form-control" name="classification{{index}}" ng-model="u.classification" ng-class="{'parsley-error': formHolder.input.classification.$touched && formHolder.input.classification.$invalid}" required>
+		                    <span class="text-danger" ng-show="formHolder.input.classification.$touched && formHolder.input.classification.$invalid"> Please Indicate Classification</span>
 		                </div>
 		            </div>
 		                                     
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Condition </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="_condition{{index}}" ng-model="u._condition">
+		                   <input type="text" class="form-control" name="_condition{{index}}" ng-model="u._condition" ng-class="{'parsley-error': formHolder.input._condition.$touched && formHolder.input._condition.$invalid}" required>
+		                   <span class="text-danger" ng-show="formHolder.input._condition.$touched && formHolder.input._condition.$invalid"> Please Indicate Condition</span>
 		                </div>
 		            </div>                                                                        
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Supplier </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="supplier{{index}}" ng-model="u.supplier">
+		                   <input type="text" class="form-control" name="supplier{{index}}" ng-model="u.supplier" ng-class="{'parsley-error': formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid}" required>
+		                   <span class="text-danger" ng-show="formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid"> Please Indicate Supplier</span>
 		                </div>
 		            </div>
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Remarks </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="remarks{{index}}" ng-model="u.remarks">
+		                   <input type="text" class="form-control" name="remarks{{index}}" ng-model="u.remarks" ng-class="{'parsley-error': formHolder.input.remarks.$touched && formHolder.input.remarks.$invalid}" required>
+		                   <span class="text-danger" ng-show="formHolder.input.remarks.$touched && formHolder.input.remarks.$invalid"> Please Indicate Remarks</span>
 		                </div>
 		            </div>
 		        </form>
 		        <hr>
 			</div>
-		</div>
+		</form>
+	</div>
+		
 	</div>
 	<section>
 		<div align="right">
@@ -94,5 +112,6 @@
 			<button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.cancel(this)">Cancel</button>
 		</div>
 	</section>
+<!-- </form> -->
 </section>
 

@@ -56,10 +56,10 @@
                                 <span class="clearfix"></span>
                             </div>
 
-                            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                            <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
                                  <input type="text" placeholder="Search..." class="form-control">
                                  <a href=""><i class="fa fa-search"></i></a>
-                            </form>
+                            </form> -->
 
 
                             <ul class="nav navbar-nav navbar-right pull-right">

@@ -56,11 +56,11 @@
                                 <span class="clearfix"></span>
                             </div>
 
-                            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                            <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
                                  <input type="text" placeholder="Search..." class="form-control">
                                  <a href=""><i class="fa fa-search"></i></a>
                             </form>
-
+ -->
 
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
@@ -128,12 +128,16 @@
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Maintenance </span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
-                                    <li><a href="javascript:;">Property Return Slip</a></li>
-                                    <li><a href="javascript:;">Inventory of Equipment</a></li>
-                                    <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
-                                    <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
-                                    <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
+                                    <li><a href="javascript:;">Brand</a></li>
+                                    <li><a href="javascript:;">Classification</a></li>
+                                    <li><a href="javascript:;">Model</a></li>
+                                    <li><a href="javascript:;">Personnel</a></li>
+                                    <li><a href="javascript:;">Department</a></li>
+                                    <li><a href="javascript:;">Division</a></li>
+                                    <li><a href="javascript:;">Security</a></li>
+                                    <li><a href="javascript:;">Type</a></li>
+                                    <li><a href="javascript:;">Supplier</a></li>
+                                    <li><a href="javascript:;">Accountable Officer</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -180,15 +184,6 @@
 
                                         <div class="tab-pane" id="temp_2">
                                             <div id="AR_form"></div>
-                                        </div>
-                                        <div class="tab-pane" id="temp_3">
-                                            Hi
-                                        </div>
-                                        <div class="tab-pane" id="temp_4">
-                                            Fuck you
-                                        </div>
-                                        <div class="tab-pane" id="temp_5">
-                                            Ow yeah
                                         </div>
                                         
                                     </div>
@@ -246,6 +241,8 @@
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
+        <script src="modules/validation/validate.js"></script>
+        <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
         <script src="modules/equipment.js"></script>
         <script src="controllers/equipment.js"></script>

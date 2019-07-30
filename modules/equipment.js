@@ -1,4 +1,4 @@
-angular.module('equipments-module',[]).factory('stocks', function($http,$compile){
+angular.module('equipments-module',['bootstrap-growl','bootstrap-modal']).factory('stocks', function($http,$compile,growl,bootstrapModal){
 
 function stocks(){
 
@@ -23,11 +23,24 @@ function stocks(){
 
 	};
 
+	function validate(scope) { 	//validation
+			
+		var controls = scope.formHolder.input.$$controls;
+		angular.forEach(controls,function(elem,i) {
+			
+			if (elem.$$attr.$attr.required) elem.$touched = elem.$invalid;					
+		});
+		return scope.formHolder.input.$invalid;
+		
+	};
+
 	self.listOfEquipment = function(scope){ 
 		if (scope.$id>2) scope = scope.$parent;	
 
 		scope.btns.add = false;
 		scope.btns.multiple = true;
+
+		console.log(scope);
 
 		$http({
 
@@ -79,11 +92,13 @@ function stocks(){
 
 	self.equipSave = function(scope){
 
-		if (scope.$id > 2) scope = scope.$parent;
+		// if (scope.$id > 2) scope = scope.$parent;
 
-		var multingle;
 		scope.btns.add = true;
 		scope.btns.multiple = false;
+		var multingle;
+
+		console.log(scope);
 
 		if(scope.input.multiple){
 
@@ -94,22 +109,35 @@ function stocks(){
 		}
 
 
-		$http({
+		if (validate(scope)){ 
+			growl.show('alert alert-danger',{from: 'top', amount: 55},'Are you fucking noob? Please complete required fields.');
+			return;
+		// };
 
-			url: "handlers/equipSave.php",
-			method: "POST",
-			data: multingle
-		}).then(function onSuccess(res){
+		// if ((scope.input.multiple.property_no && scope.input.multiple.description && scope.input.multiple.model && scope.input.multiple.acquisition && scope.input.multiple.acquisition_cost && scope.input.multiple.acquisition_date && scope.input.multiple._serial && scope.input.multiple.inventory_tag && scope.input.multiple.classification && scope.input.multiple._condition && scope.input.multiple.supplier && scope.input.multiple.remarks)==null)
+		// {
 
-			alert("Succccccccess");
-			self.cancel(scope);
+		// 	alert('Fields Required');
+			
+		} else {
 
-		}, function onError(res){
 
-			//error
-		});
+			$http({
+
+				url: "handlers/equipSave.php",
+				method: "POST",
+				data: multingle
+			}).then(function onSuccess(res){
+
+				alert("Succccccccess");
+				self.cancel(scope);
+
+			}, function onError(res){
+
+				//error
+			});
 		
-		
+		};
 	};
 
 	self.equipEdit = function(scope, input){
