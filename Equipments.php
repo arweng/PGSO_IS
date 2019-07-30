@@ -99,8 +99,33 @@
                             <li class="has_sub">
                                 <li><a href="index.php" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
                                 </li>
-                                <li class="has_sub"><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span>Equipment</span></a>   
+                                <!-- <li class="has_sub"><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span>Equipment</span></a>  -->  
+                                <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="fill_equipment.php">Fill in Equipment</a></li>
+                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                    <li><a href="javascript:;">Return Slip</a></li>
+                                    <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
+                                    <li><a href="javascript:;">Track Property</a></li>
+                                </ul>
+                            </li>
                                 </li>
+                                 <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Report </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
+                                    <li><a href="javascript:;">Property Return Slip</a></li>
+                                    <li><a href="javascript:;">Inventory of Equipment</a></li>
+                                    <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
+                                    <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
+                                    <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
+                                </ul>
+                            </li>
+
+
+
+
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -126,38 +151,6 @@
                         
                         <div class="row">
                             <div class="col-sm-12">
-                                <ul class="nav nav-tabs"> 
-                                    <li class="active"> 
-                                        <a href="#add_form" data-toggle="tab" aria-expanded="false">
-                                            <span class="visible-xs"><i class="fa fa-home"></i></span> 
-                                            <span class="hidden-xs">Add Form</span> 
-                                        </a> 
-                                    </li> 
-                                    <li class=""> 
-                                        <a href="#temp_2" data-toggle="tab" aria-expanded="true"> 
-                                            <span class="visible-xs"><i class="fa fa-user"></i></span> 
-                                            <span class="hidden-xs">Acknowledgement Reciept</span> 
-                                        </a> 
-                                    </li> 
-                                    <li class=""> 
-                                        <a href="#temp_3" data-toggle="tab" aria-expanded="false"> 
-                                            <span class="visible-xs"><i class="fa fa-envelope-o"></i></span> 
-                                            <span class="hidden-xs">Return Slip</span> 
-                                        </a> 
-                                    </li> 
-                                    <li class=""> 
-                                        <a href="#temp_4" data-toggle="tab" aria-expanded="false"> 
-                                            <span class="visible-xs"><i class="fa fa-cog"></i></span> 
-                                            <span class="hidden-xs">Re-property Acknowledgement Reciept</span> 
-                                        </a> 
-                                    </li>
-                                    <li class=""> 
-                                        <a href="#temp_5" data-toggle="tab" aria-expanded="false"> 
-                                            <span class="visible-xs"><i class="fa fa-cog"></i></span> 
-                                            <span class="hidden-xs">Track Property</span> 
-                                        </a> 
-                                    </li> 
-                                </ul>
                                 <div class="card-box">
 
                                     <div class="tab-content">

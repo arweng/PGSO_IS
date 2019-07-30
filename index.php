@@ -94,12 +94,37 @@
                 <div class="sidebar-inner slimscrollleft">
                     <!--- Divider -->
                     <div id="sidebar-menu">
-                        <ul>
+                         <ul>
 
-                        	<li class="text-muted menu-title">Navigation</li>
-							<li class="has_sub">
-                                <li><a href="index.php" class="waves-effect active"><i class="ti-home"></i><span> Dashboard </span></a></li>
-                                <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li>
+                            <li class="text-muted menu-title">Navigation</li>
+                            <li class="has_sub">
+                                <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Fill in Equipment</a></li>
+                                    </ul>
+                                </li>
+                               <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
+                            </li>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
+                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                    <li><a href="javascript:;">Return Slip</a></li>
+                                    <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
+                                    <li><a href="javascript:;">Track Property</a></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Report </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
+                                    <li><a href="javascript:;">Property Return Slip</a></li>
+                                    <li><a href="javascript:;">Inventory of Equipment</a></li>
+                                    <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
+                                    <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
+                                    <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
+                                </ul>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
