@@ -1,28 +1,24 @@
+
 <?php
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
 require_once '../db.php';
 
-$con = new pdo_db('equipment');
+$con = new pdo_db("equipment");
 
+$_POST['acquisition_date'] = date("Y-m-d",strtotime($_POST['acquisition_date']));
 
-if ($_POST['id']>0) {
+if ($_POST['id']>0) { // update
 
-	$con->updateObj($_POST,'id');
+	$_POST['system_log'] = "CURRENT_TIMESTAMP";
+	$con->updateData($_POST,'id');
 	
-} else {
-
-	foreach($_POST as $key => $post){
-
-		$_POST[$key]['acquisition_date'] = date("Y-m-d",strtotime($post['acquisition_date']));
-
-	};
-
+} else { // save
+	
 	unset($_POST['id']);
-	$con->insertDataMulti($_POST);
-
-};	
-
+	$con->insertData($_POST);	
+	
+};
 
 ?>

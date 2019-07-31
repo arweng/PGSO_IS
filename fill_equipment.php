@@ -165,31 +165,23 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box">
-
-                                    <div class="tab-content">
-                                        <!-- INFORMATION HERE -->
-                                        <div class="tab-pane active" id="add_form">
-                                            <div>
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)" ng-disabled="btns.add">Add</button>
-
-
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button>
-                                                    
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button>
-                                            </div>
+                                    <div>
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button>
+                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
+                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
+                                    </div>
                                             <br>
-
                                             <div id="content"></div>
-                                        </div>
-
+                                        
+<!-- 
                                         <div class="tab-pane" id="temp_2">
-                                            <div id="AR_form"></div>
-                                        </div>
+                                            <div id="AR_form"></div> -->
+                                       
                                         
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class = "a_content" id="a_content"> </div>
+                                           <!--  <div class = "a_content" id="a_content"> </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -236,6 +228,7 @@
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
         <script src="assets/js/bootbox.min.js"></script>
+        <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
@@ -244,7 +237,7 @@
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/equipment.js"></script>
+        <script src="modules/equipment_new.js"></script>
         <script src="controllers/equipment.js"></script>
 
 

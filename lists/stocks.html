@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="u in inputs track by $index" class="gradeC odd" role="row">
+          <tr ng-repeat="u in inputs" class="gradeC odd" role="row">
             <td>{{u.id}}</td>
             <td>{{u.property_no}}</td>
             <td>{{u.description}}</td>
@@ -37,7 +37,7 @@
             <td>{{u.supplier}}</td>
             <td>{{u.remarks}}</td> -->
             <td>
-              <a class="on-default edit-row"> <button ng-click='myEquipment.equipEdit(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-pencil"></i> </button></a>
+              <a class="on-default edit-row"> <button ng-click='myEquipment.equipAdd(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-pencil"></i> </button></a>
               <a class="on-default remove-row"> <button ng-click='myEquipment.equipDelete(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-trash-o"></i> </button></a>
             </td>
           </tr>

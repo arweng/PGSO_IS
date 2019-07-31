@@ -109,7 +109,7 @@ function stocks(){
 		}
 
 
-		if (validate(scope)){ 
+		if (validate(scope,'multingle')){ 
 			growl.show('alert alert-danger',{from: 'top', amount: 55},'Are you fucking noob? Please complete required fields.');
 			return;
 		// };

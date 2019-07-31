@@ -6,8 +6,8 @@ require_once '../db.php';
 
 $con = new pdo_db('equipment');
 
-$edit = $con->getData("SELECT * FROM equipment WHERE id = ".$_POST['id']);
+$input = $con->getData("SELECT * FROM equipment WHERE id = ".$_POST['id']);
 
-echo json_encode($edit[0]);
+echo json_encode($input[0]);
 
 ?>
