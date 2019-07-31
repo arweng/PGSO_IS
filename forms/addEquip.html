@@ -23,9 +23,12 @@
 			                <label class="col-md-4 control-label">Model </label>
 			                <div class="col-md-8">
 			                	<div class= "input-group" data-placement="top" data-align="top">
-			                    <input type="text" class="form-control" name="model{{index}}" ng-model="input.model" ng-class="{'parsley-error': formHolder.input.model.$touched && formHolder.input.model.$invalid}" required><span class="input-group-addon"><button class="glyphicon glyphicon-plus-sign" ng-click="javascript:;">
-			                    <span class="text-danger" ng-show="formHolder.input.model.$touched && formHolder.input.model.$invalid"> Please Indicate Model </span></button> </span></div>
+			                    <input type="text" class="form-control" name="model{{index}}" ng-model="input.model" ng-class="{'parsley-error': formHolder.input.model.$touched && formHolder.input.model.$invalid}" required>
+			                    <span class="input-group-addon"><button type="button" class ="btn btn-info waves-effect waves-light btn-xs" ng-click="javascript:;"><i class="fa fa-plus square"></i></button></span>
+			                    </div><span class="text-danger" ng-show="formHolder.input.model.$touched && formHolder.input.model.$invalid"> Please Indicate Model </span>
+
 			                </div>
+
 			            </div>                     
 			            <div class="form-group">
 			                <label class="col-md-4 control-label">Acquisition </label>
@@ -86,10 +89,12 @@
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Supplier </label>
 		                <div class="col-md-8">
-		                   <input type="text" class="form-control" name="supplier{{index}}" ng-model="input.supplier" ng-class="{'parsley-error': formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid}" required>
+		                	<div class= "input-group" data-placement="top" data-align="top">
+		                   	<input type="text" class="form-control" name="supplier{{index}}" ng-model="input.supplier" ng-class="{'parsley-error': formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid}" required><span class="input-group-addon"><button type="button" class ="btn btn-info waves-effect waves-light btn-xs" ng-click="javascript:;"><i class="fa fa-plus square"></i></button></span>
+			               </div>
 		                   <span class="text-danger" ng-show="formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid"> Please Indicate Supplier</span>
-		                </div>
-		            </div>
+		               </div>
+
 		            <div class="form-group">
 		                <label class="col-md-4 control-label">Remarks </label>
 		                <div class="col-md-8">
