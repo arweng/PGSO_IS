@@ -54,6 +54,16 @@ function stocks(){
 		scope.input = 0;
 	};
 
+	self.sample = function(scope){
+
+		var title = "Add Model";
+
+		var content = 'forms/for-modal.html';
+
+		bootstrapModal.box(scope,title,content,function() {});
+
+	};
+
 
 	self.equipAdd = function(scope,row){
 
@@ -181,26 +191,26 @@ function stocks(){
 		});
 	};
 
-self.multiple = {
+	// self.multiple = {
 	
-		add: function(scope,input) {
+	// 	add: function(scope,input) {
 
 
 
-			scope.input.multiple.push({
-				model: '',
+	// 		scope.input.multiple.push({
+	// 			model: '',
 
-			});
+	// 		});
 
-		},
+	// 	},
 
-		remove: function(scope) {
+	// 	remove: function(scope) {
 
-			scope.input.multiple.pop();
+	// 		scope.input.multiple.pop();
 
-		}
+	// 	}
 
-	};
+	// };
 
 
 };
