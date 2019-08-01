@@ -181,13 +181,6 @@ function stocks(){
 		});
 	};
 
-	self.modal = function (scope,input)
-	{
-
-		bootstrapModal.box2(multiple.add,onOk, function(){} );
-
-	}
-
 self.multiple = {
 	
 		add: function(scope,input) {
