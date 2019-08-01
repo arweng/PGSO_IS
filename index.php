@@ -97,18 +97,13 @@
                          <ul>
 
                             <li class="text-muted menu-title">Navigation</li>
-                            <li class="has_sub">
-                                <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Fill in Equipment</a></li>
-                                    </ul>
-                                </li>
-                               <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
+
+                            <li><a href="index.php" class="waves-effect active"><i class="ti-home active"></i><span> Dashboard </span></a>
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
+                                <a href="Equipments.php" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
+                                    <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
                                     <li><a href="javascript:;">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
