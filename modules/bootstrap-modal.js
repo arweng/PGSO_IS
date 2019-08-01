@@ -5,6 +5,16 @@ angular.module('bootstrap-modal',[]).service('bootstrapModal', function($compile
 		var dialog = bootbox.confirm({
 			title: title,
 			message: content,
+			buttons: {
+				confirm: {
+					label: 'Okay',
+					className: 'btn btn-primary'
+				},				
+				cancel: {
+					label: 'Close',
+					className: 'btn btn-default'
+				}
+			},
 			callback: function (result) {
 				if (result) {
 					onOk(scope);
@@ -44,6 +54,35 @@ angular.module('bootstrap-modal',[]).service('bootstrapModal', function($compile
 			buttons: {
 				confirm: {
 					label: 'Ok',
+					className: 'btn-success'
+				},				
+				cancel: {
+					label: 'Close',
+					className: 'btn-danger'
+				}
+			},			
+			callback: function (result) {
+				if (result) {
+					return onOk(scope);
+				}
+			}
+		});
+		
+		dialog.init(function() {
+			$timeout(function() { dialog.find('.bootbox-body').load(content) }, 500);
+			$timeout(function() { $compile($('.bootbox-body')[0])(scope); }, 600);
+		});
+	
+	};
+	
+	this.caseBox = function(scope,title,content,onOk) {
+
+		var dialog = bootbox.confirm({
+			title: title,
+			message: 'Loading content...',
+			buttons: {
+				confirm: {
+					label: 'Save',
 					className: 'btn-success'
 				},				
 				cancel: {
