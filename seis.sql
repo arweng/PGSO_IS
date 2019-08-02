@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 01, 2019 at 09:44 AM
+-- Generation Time: Aug 02, 2019 at 01:18 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -45,6 +45,25 @@ CREATE TABLE `ack_reciept` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `brand`
+--
+
+CREATE TABLE `brand` (
+  `id` int(11) NOT NULL,
+  `brandName` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `brand`
+--
+
+INSERT INTO `brand` (`id`, `brandName`, `description`) VALUES
+(1, 'sample', 'sample');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `equipment`
 --
 
@@ -74,6 +93,26 @@ INSERT INTO `equipment` (`id`, `property_no`, `description`, `model`, `acquisiti
 (2, '1400778', 'dfgdfg', 'dfgsd', 'sdfgsdf', '2019-07-30', 4334534, '456456fghfgh', 46456, 'fghfg', 'hfghfg', 'hfghf', 'ghdfghd', '2019-07-30 08:50:01'),
 (3, '2324', 'fdg', 'fdg', 'dfgfg', '2019-07-31', 25, 'sdr23456', 4532450, 'dfgdf', 'fdgfdg', 'fdgfd', 'gfdg', '2019-07-31 00:24:48'),
 (4, '09876', 'jhsada', 'snjabdjabs', 'sdfsadfs', '2019-08-01', 123456, '234sdfgh', 13242, 'dfsdf', 'sdfs', 'dfgsfdg', 'fdsgdf', '2019-08-01 00:14:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `model`
+--
+
+CREATE TABLE `model` (
+  `id` int(11) NOT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `brandName` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `model`
+--
+
+INSERT INTO `model` (`id`, `model`, `description`, `brandName`) VALUES
+(1, 'asd', 'asd', 'asd');
 
 -- --------------------------------------------------------
 
@@ -110,9 +149,21 @@ ALTER TABLE `ack_reciept`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `brand`
+--
+ALTER TABLE `brand`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `equipment`
 --
 ALTER TABLE `equipment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `model`
+--
+ALTER TABLE `model`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -131,10 +182,20 @@ ALTER TABLE `users_tbl`
 ALTER TABLE `ack_reciept`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `brand`
+--
+ALTER TABLE `brand`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `equipment`
 --
 ALTER TABLE `equipment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `model`
+--
+ALTER TABLE `model`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users_tbl`
 --
