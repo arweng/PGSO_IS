@@ -41,7 +41,7 @@
               <!-- <input type="checkbox" ng-model="u.selected" value="{{u.property_no}}"> -->
 
               <button ng-click="ackreciept.addtocart(this)">{{addtocart.addlabel}}</button>
-              <button ng-click="ackreciept.removetocart(this)">{{addtocart.removelabel}}</button>
+              <!-- <button ng-click="ackreciept.removetocart(this)">{{addtocart.removelabel}}</button> -->
 
             </td>
           </tr>
@@ -51,13 +51,24 @@
   </div>
 </div>
 
-<div>
-	<table>
-		<tr>
-			<th>Checked</th>
-		</tr>
-		<tr ng-repeat = "a in checked" >
-			<td>{{a.property_no}}</td>
-		</tr>
-	</table>
+<div class="row">
+	<div class="col-lg-3">
+		<div class="table-responsive">
+			<table class="table table-striped m-0">
+				<tr>
+					<th>Added to Cart</th>
+					<th>&nbsp; Action</th>
+				</tr>
+				<tr ng-repeat = "a in checked track by $index">
+					<td>{{a.model}}</td>
+					<td><button ng-click="checked.splice($index,1)" class="btn btn-info waves-effect waves-light btn-sm"><i class="glyphicon glyphicon-remove"></i></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="col-lg-9">
+		<div class="table-responsive">
+		</div>
+	</div>
 </div>
+

@@ -51,8 +51,8 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 		};
 
-		self.removetocart = function(scope){
-			scope.checked.splice(scope.u.id,1);
+		self.sampleconsole = function(scope){
+			console.log(scope);
 		}
 	};
 
