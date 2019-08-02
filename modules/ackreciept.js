@@ -6,17 +6,16 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 		self.start = function(scope){
 
-			// scope.ackinput = {};
-			// scope.ackinput.id = 0;
+			scope.ackinput = {};
 			// scope.check = {};
 
 			scope.ackinputs = [];
 			scope.checked = [];
+			scope.indexHolder = [];
 
 			scope.addtocart = {
-				addlabel: "Add",
-				removelabel: "Remove"
-			}
+				btnAdd: false
+			};
 
 			self.acklist(scope);
 		};
@@ -45,14 +44,16 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 		};
 
-		self.addtocart = function(scope){
-			scope.checked.push(scope.u);
-			console.log(scope.u.id);
+		self.disableBtn = function(scope,u){
 
-		};
+			console.log(scope.checked.indexOf(u));
+			return scope.checked.indexOf(u) !== -1;
+		}
 
-		self.sampleconsole = function(scope){
-			console.log(scope);
+		self.removetocart = function(scope,index){
+
+			scope.addtocart.btnAdd = false;
+			scope.checked.splice(index,1)
 		}
 	};
 
