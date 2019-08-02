@@ -26,7 +26,7 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 			
 			$http({
 
-				url: 'handlers/acknowledgement.php',
+				url: 'handlers/acknowledge_folder/acknowledgement.php',
 				method: 'GET'
 			}).then(function success(res){
 
@@ -38,7 +38,7 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 			$("#content").html("Loading ....");
 
-			$("#content").load("forms/acknowledgementlist.html", function(){
+			$("#content").load("forms/acknowledge_folder/acknowledgementlist.html", function(){
 
 				$compile($("#content")[0])(scope);
 			});
