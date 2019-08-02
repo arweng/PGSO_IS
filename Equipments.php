@@ -103,7 +103,7 @@
                                     <a href="Equipments.php" class="waves-effect active"><i class="ti-write"></i> <span> Equipment </span> </a>
                                     <ul class="list-unstyled">
                                         <li><a href="fill_equipment.php">Fill in Equipment</a></li>
-                                        <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                        <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                         <li><a href="javascript:;">Return Slip</a></li>
                                         <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                         <li><a href="javascript:;">Track Property</a></li>

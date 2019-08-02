@@ -11,6 +11,9 @@
 
         <title>Ubold - Responsive Admin Dashboard Template</title>
 
+        <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
         <!--Morris Chart CSS -->
          <link rel="stylesheet" href="assets/plugins/morris/morris.css">
 
@@ -132,7 +135,7 @@
                                     <li><a href="javascript:;">Classification</a></li>
                                     <li><a href="model.php">Model</a></li>
                                     <li><a href="javascript:;">Personnel</a></li>
-                                    <li><a href="javascript:;">Department</a></li>
+                                    <li><a href="department.php">Department</a></li>
                                     <li><a href="javascript:;">Division</a></li>
                                     <li><a href="javascript:;">Security</a></li>
                                     <li><a href="javascript:;">Type</a></li>
@@ -216,6 +219,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>

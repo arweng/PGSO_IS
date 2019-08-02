@@ -132,7 +132,7 @@
                                     <li><a href="javascript:;">Classification</a></li>
                                     <li><a href="javascript:;">Model</a></li>
                                     <li><a href="javascript:;">Personnel</a></li>
-                                    <li><a href="javascript:;">Department</a></li>
+                                    <li><a href="department.php">Department</a></li>
                                     <li><a href="javascript:;">Division</a></li>
                                     <li><a href="javascript:;">Security</a></li>
                                     <li><a href="javascript:;">Type</a></li>

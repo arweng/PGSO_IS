@@ -102,7 +102,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
-                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
@@ -185,7 +185,6 @@
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
 		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
-
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>

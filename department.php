@@ -30,7 +30,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="model" ng-controller="modelCtrl" account-profile>
+    <body class="fixed-left" ng-app="department" ng-controller="departmentCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -66,7 +66,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -102,7 +102,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
-                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
@@ -124,9 +124,9 @@
                                 <ul class="list-unstyled">
                                     <li><a href="javascript:;">Brand</a></li>
                                     <li><a href="javascript:;">Classification</a></li>
-                                    <li class="active"><a href="model.php">Model</a></li>
+                                    <li><a href="model.php">Model</a></li>
                                     <li><a href="javascript:;">Personnel</a></li>
-                                    <li><a href="department.php">Department</a></li>
+                                    <li class="active"><a href="department.php">Department</a></li>
                                     <li><a href="javascript:;">Division</a></li>
                                     <li><a href="javascript:;">Security</a></li>
                                     <li><a href="javascript:;">Type</a></li>
@@ -151,7 +151,8 @@
                         <!-- Page-Title -->
 						<div class="row">
 							<div class="col-lg-12">
-							   <div class = "x_content" id="x_content"> </div> <!-- it will display here -->
+							   <div class = "x_content" id="x_content"></div>
+                                <!-- it will display here -->
 							</div>
 						</div>
                     </div> <!-- container -->
@@ -164,8 +165,6 @@
             </div>
         </div>
         <!-- END wrapper -->
-
-
 
         <script>
             var resizefunc = [];
@@ -211,8 +210,8 @@
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/model.js"></script>
-        <script src="controllers/model.js"></script>
+        <script src="modules/department.js"></script>
+        <script src="controllers/department.js"></script>
 
     </body>
 </html>
