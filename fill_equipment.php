@@ -128,16 +128,16 @@
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Maintenance </span> </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="javascript:;">Brand</a></li>
-                                    <li><a href="javascript:;">Classification</a></li>
-                                    <li><a href="javascript:;">Model</a></li>
-                                    <li><a href="javascript:;">Personnel</a></li>
+                                    <li><a href="brand.php">Brand</a></li>
+                                    <li><a href="classification.php">Classification</a></li>
+                                    <li><a href="model.php">Model</a></li>
+                                    <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
-                                    <li><a href="javascript:;">Division</a></li>
+                                    <li><a href="units.php">Units</a></li>
                                     <li><a href="javascript:;">Security</a></li>
-                                    <li><a href="javascript:;">Type</a></li>
-                                    <li><a href="javascript:;">Supplier</a></li>
-                                    <li><a href="javascript:;">Accountable Officer</a></li>
+                                    <li><a href="type.php">Type</a></li>
+                                    <li><a href="supply.php">Supplier</a></li>
+                                    <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
                         </ul>

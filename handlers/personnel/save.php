@@ -6,16 +6,16 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 include_once '../../db.php';
 
-$con = new pdo_db("department");
+$con = new pdo_db("personnel");
 
 
-if ($_POST['department']['id']) {
+if ($_POST['personnel']['id']) {
 	
-	$unit = $con->updateObj($_POST['department'],'id');
+	$personnel = $con->updateObj($_POST['personnel'],'id');
 	
 } else {
 	
-	$unit = $con->insertObj($_POST['department']);
+	$personnel = $con->insertObj($_POST['personnel']);
 	echo $con->insertId;
 
 }

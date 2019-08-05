@@ -8,9 +8,9 @@ session_start();
 
 $con = new pdo_db();
 
-$units = $con->getData("SELECT * FROM department");
+$accountable = $con->getData("SELECT * FROM accountable WHERE id = $_POST[id]");
 
 header("Content-Type: application/json");
-echo json_encode($units);
+echo json_encode($accountable[0]);
 
 ?>

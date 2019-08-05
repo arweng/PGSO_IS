@@ -22,7 +22,6 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 		self.acklist = function(scope){
 
-			
 			$http({
 
 				url: 'handlers/acknowledge_folder/acknowledgement.php',

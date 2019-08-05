@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Model</title>
+        <title>PGSO | Brand</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -30,7 +30,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="model" ng-controller="modelCtrl" account-profile>
+    <body class="fixed-left" ng-app="supply" ng-controller="supplyCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -102,7 +102,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
-                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
@@ -124,13 +124,13 @@
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
-                                    <li class="active"><a href="model.php">Model</a></li>
+                                    <li><a href="model.php">Model</a></li>
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
                                     <li><a href="javascript:;">Security</a></li>
                                     <li><a href="type.php">Type</a></li>
-                                    <li><a href="supply.php">Supplier</a></li>
+                                    <li class="active"><a href="supply.php">Supplier</a></li>
                                     <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
@@ -186,7 +186,6 @@
 		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
-
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
         <script src="assets/plugins/counterup/jquery.counterup.min.js"></script>
@@ -211,8 +210,8 @@
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/model.js"></script>
-        <script src="controllers/model.js"></script>
+        <script src="modules/supply.js"></script>
+        <script src="controllers/supply.js"></script>
 
     </body>
 </html>
