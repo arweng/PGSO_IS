@@ -100,7 +100,7 @@
                                 </li>
                                 <!-- <li class="has_sub"><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span>Equipment</span></a>  -->  
                                 <li class="has_sub">
-                                    <a href="Equipments.php" class="waves-effect active"><i class="ti-write"></i> <span> Equipment </span> </a>
+                                    <a href="Equipments.php" class="waves-effect active"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                     <ul class="list-unstyled">
                                         <li><a href="fill_equipment.php">Fill in Equipment</a></li>
                                         <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
@@ -110,7 +110,7 @@
                                     </ul>
                                 </li>
                                  <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Report </span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Property Return Slip</a></li>
@@ -235,7 +235,7 @@
         <script src="modules/fullscreen.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/equipment.js"></script>
+        <script src="modules/equipment_new.js"></script>
         <script src="controllers/equipment.js"></script>
 
 

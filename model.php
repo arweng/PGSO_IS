@@ -99,7 +99,7 @@
                                <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
                                     <li><a href="javascript:;">Acknowledgement Receipt</a></li>
@@ -109,7 +109,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Report </span> </a>
+                                <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Property Return Slip</a></li>
@@ -120,7 +120,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect active"><i class="ti-files"></i> <span> Maintenance </span> </a>
+                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">10</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
@@ -128,7 +128,7 @@
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
-                                    <li><a href="javascript:;">Security</a></li>
+                                    <li><a href="security.php">Security<span class="label label-success pull-right">4</span></a></li>
                                     <li><a href="type.php">Type</a></li>
                                     <li><a href="supply.php">Supplier</a></li>
                                     <li><a href="accountable.php">Accountable Officer</a></li>
