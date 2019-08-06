@@ -39,10 +39,33 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 				// instantiate datable
 				$timeout(function() {
 					$('#sample').DataTable({
-						"ordering": true
-					});	
+						"ordering": true,
+						"paginate": false,
+						"paging": false,
+						"scrollY": 350,
+						"info": false
+					});
 				},200);
 				
+			});
+			// $.extend( $.fn.dataTable.defaults, {
+			//     searching: false,
+			//     ordering:  false
+			// } );
+
+			$timeout(function() {
+				$('#onCartTable').DataTable({
+					"ordering": true,
+					"paging": false,
+					"paginate": false,
+					"searching": false,
+					"scrollY": 280,
+					"info": false,
+					"columns": [
+						{title: "On Cart"},
+						{title: "Actions"}
+					]
+				});
 			});
 
 		};
