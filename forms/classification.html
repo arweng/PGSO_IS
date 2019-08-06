@@ -1,0 +1,59 @@
+<div class="row">
+	<h4 class="page-title">&nbsp;&nbsp;Form</h4>
+	<div class="col-md-10">
+		<ol class="breadcrumb">
+			<li>
+				<a href="index.php">PGSO</a>
+			</li>
+			<li>
+				<a href="">Maintenance</a>
+			</li>
+			<li class="active">
+				Classification
+			</li>
+		</ol>
+	</div>
+</div>
+<div class="panel panel-border panel-primary">
+	<div class="panel-heading">
+		<h4><i class="icon icon-note"></i> Form
+		<button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+		</h4>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-12">
+			<form name="formHolder.classification" id="formHolder.classification" novalidate autocomplete="off">
+				<div class="form-group" ng-class="{'has-error': formHolder.classification.classifications.$touched && formHolder.classification.classifications.$invalid}">
+					 <div class="col-md-4">
+						<label>Classification</label>
+						<input type="text" class="form-control" name="classifications" ng-model="classification.classifications" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.classification.classifications.$touched && formHolder.classification.classifications.$invalid">This field is required</span>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'has-error': formHolder.classification.description.$touched && formHolder.classification.description.$invalid}">
+					 <div class="col-md-4">
+						<label>Description</label>
+						<input type="text" class="form-control" name="description" ng-model="classification.description" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.classification.description.$touched && formHolder.classification.description.$invalid">This field is required</span>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'has-error': formHolder.classification.type_id.$touched && formHolder.classification.type_id.$invalid}">
+					 <div class="col-md-4">
+						<label>Type</label>
+						<select class="form-control" name="type_id" ng-model="classification.type_id" ng-disabled="controls.ok.btn" ng-options="data.type_name for data in types track by data.id" required></select>
+						<span class="help-block" ng-show="formHolder.classification.type_id.$touched && formHolder.classification.type_id.$invalid">This field is required</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	
+	</div>
+		<hr>
+	<div class="col-md-12">
+		<button type="submit" class="btn btn-default waves-effect waves-light" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		<button type="submit" class="btn btn-white waves-effect waves-light" ng-click="form.list(this)" style="margin-right: 5px;">{{controls.cancel.label}}</button>
+	</div>
+	
+</div>
+

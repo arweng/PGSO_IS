@@ -11,9 +11,6 @@
 
         <title>Ubold - Responsive Admin Dashboard Template</title>
 
-        <!-- DataTables -->
-        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-
         <!--Morris Chart CSS -->
          <link rel="stylesheet" href="assets/plugins/morris/morris.css">
 
@@ -33,7 +30,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="ackreciept" ng-controller="ackrecieptCtrl" account-profile>
+    <body class="fixed-left" ng-app="equipments" ng-controller="equipmentCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -111,7 +108,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
-                                    <li><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
@@ -129,7 +126,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span>Maintenance<span class="label label-success pull-right">10</span></a>
+                                <a href="#" class="waves-effect"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">10</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
@@ -137,7 +134,15 @@
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
-                                    <li><a href="security.php">Security<span class="label label-success pull-right">4</span></a></li>
+                                    <li class="has_sub">
+                                        <a href="security.php">Security<span class="label label-success pull-right">4</span></a>
+                                            <ul class="list-unstyled">
+                                                <li><a href="javascript:;">Users</a></li>
+                                                <li><a href="javascript:;">Group</a></li>
+                                                <li><a href="javascript:;">Privileges</a></li>
+                                                <li><a href="javascript:;">Audit Trail</a></li>
+                                            </ul>
+                                    </li>
                                     <li><a href="type.php">Type</a></li>
                                     <li><a href="supply.php">Supplier</a></li>
                                     <li><a href="accountable.php">Accountable Officer</a></li>
@@ -169,7 +174,7 @@
                             <div class="col-sm-12">
                                 <div class="card-box">
                                     <div>
-                                        <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button> -->
+                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button>
                                                 <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
                                                 <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
                                     </div>
@@ -219,8 +224,6 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
-        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -242,10 +245,10 @@
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/ackreciept.js"></script>
-        <script src="controllers/acknowledgementreciept.js"></script>
+        <script src="modules/equipment_new.js"></script>
+        <script src="controllers/equipment.js"></script>
 
-        
+
 
     </body>
 </html>
