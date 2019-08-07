@@ -1,4 +1,4 @@
-angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).factory('reciept', function($http,$compile,growl,bootstrapModal){
+angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).factory('reciept', function($http,$compile,$timeout,growl,bootstrapModal){
 
 	function reciept(){
 
@@ -22,7 +22,6 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 		self.acklist = function(scope){
 
-			
 			$http({
 
 				url: 'handlers/acknowledge_folder/acknowledgement.php',
@@ -35,11 +34,38 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 				//error
 			});
 
-			$("#content").html("Loading ....");
+			$('#content').load('forms/acknowledge_folder/acknowledgementlist.html', function() {
+				$timeout(function() { $compile($('#content')[0])(scope); },100);								
+				// instantiate datable
+				$timeout(function() {
+					$('#sample').DataTable({
+						"ordering": true,
+						"paginate": false,
+						"paging": false,
+						"scrollY": 350,
+						"info": false
+					});
+				},200);
+				
+			});
+			// $.extend( $.fn.dataTable.defaults, {
+			//     searching: false,
+			//     ordering:  false
+			// } );
 
-			$("#content").load("forms/acknowledge_folder/acknowledgementlist.html", function(){
-
-				$compile($("#content")[0])(scope);
+			$timeout(function() {
+				$('#onCartTable').DataTable({
+					"ordering": true,
+					"paging": false,
+					"paginate": false,
+					"searching": false,
+					"scrollY": 280,
+					"info": false,
+					"columns": [
+						{title: "On Cart"},
+						{title: "Actions"}
+					]
+				});
 			});
 
 		};
