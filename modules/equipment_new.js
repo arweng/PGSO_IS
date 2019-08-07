@@ -56,7 +56,8 @@ angular.module('equipments-module',['bootstrap-growl','bootstrap-modal','form-va
                 // instantiate datable
                 $timeout(function() {
                     $('#equipment').DataTable({
-                        "ordering": true
+                        "ordering": true,
+                        "scrollY":true
                     });	
                 },200);
                 

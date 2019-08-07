@@ -1,9 +1,14 @@
-var equipment = angular.module("equipments",['equipments-module']);
 
-	equipment.controller("equipmentCtrl",function($scope,stocks){
+    var app = angular.module('equipments',['account-module','equipments-module']);
 
-		//equipment part
-		$scope.myEquipment = stocks;
-		$scope.myEquipment.start($scope);
-		$scope.formHolder = {};
-	});
+app.controller('equipmentCtrl',function($scope,form) {
+	
+	$scope.views = {};
+	$scope.formHolder = {};
+	
+	form.data($scope);
+	form.list($scope);
+	
+	$scope.form = form;
+
+});
