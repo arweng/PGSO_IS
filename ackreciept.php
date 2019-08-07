@@ -30,7 +30,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="equipments" ng-controller="equipmentCtrl" account-profile>
+    <body class="fixed-left" ng-app="ackreciept" ng-controller="ackrecieptCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -59,8 +59,8 @@
                             <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
                                  <input type="text" placeholder="Search..." class="form-control">
                                  <a href=""><i class="fa fa-search"></i></a>
-                            </form> -->
-
+                            </form>
+ -->
 
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
@@ -96,20 +96,25 @@
                         <ul>
 
                             <li class="text-muted menu-title">Navigation</li>
-                                <li><a href="index.php" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
-                                </li>
-                                <!-- <li class="has_sub"><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span>Equipment</span></a>  -->  
-                                <li class="has_sub">
-                                    <a href="Equipments.php" class="waves-effect active"><i class="ti-write"></i> <span> Equipment </span> </a>
+                            <li class="has_sub">
+                                <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
                                     <ul class="list-unstyled">
-                                        <li><a href="fill_equipment.php">Fill in Equipment</a></li>
-                                        <li><a href="javascript:;">Acknowledgement Receipt</a></li>
-                                        <li><a href="javascript:;">Return Slip</a></li>
-                                        <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
-                                        <li><a href="javascript:;">Track Property</a></li>
+                                        <li><a href="#">Fill in Equipment</a></li>
                                     </ul>
                                 </li>
-                                 <li class="has_sub">
+                               <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
+                            </li>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-write"></i> <span> Equipment </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
+                                    <li><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
+                                    <li><a href="javascript:;">Return Slip</a></li>
+                                    <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
+                                    <li><a href="javascript:;">Track Property</a></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Report </span> </a>
                                 <ul class="list-unstyled">
                                     <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
@@ -120,10 +125,20 @@
                                     <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
                                 </ul>
                             </li>
-
-
-
-
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span> Maintenance </span> </a>
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:;">Brand</a></li>
+                                    <li><a href="javascript:;">Classification</a></li>
+                                    <li><a href="model.php">Model</a></li>
+                                    <li><a href="javascript:;">Personnel</a></li>
+                                    <li><a href="javascript:;">Department</a></li>
+                                    <li><a href="javascript:;">Division</a></li>
+                                    <li><a href="javascript:;">Security</a></li>
+                                    <li><a href="javascript:;">Type</a></li>
+                                    <li><a href="javascript:;">Supplier</a></li>
+                                    <li><a href="javascript:;">Accountable Officer</a></li>
+                                </ul>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -150,39 +165,23 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box">
-
-                                    <div class="tab-content">
-                                        <!-- INFORMATION HERE -->
-                                        <div class="tab-pane active" id="add_form">
-                                            <div>
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)" ng-disabled="btns.add">Add</button>
-
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button>
-                                                    
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button>
-                                            </div>
+                                    <div>
+                                        <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button> -->
+                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
+                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
+                                    </div>
                                             <br>
-
                                             <div id="content"></div>
-                                        </div>
-
+                                        
+<!-- 
                                         <div class="tab-pane" id="temp_2">
-                                            <div id="AR_form"></div>
-                                        </div>
-                                        <div class="tab-pane" id="temp_3">
-                                            Hi
-                                        </div>
-                                        <div class="tab-pane" id="temp_4">
-                                            Fuck you
-                                        </div>
-                                        <div class="tab-pane" id="temp_5">
-                                            Ow yeah
-                                        </div>
+                                            <div id="AR_form"></div> -->
+                                       
                                         
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class = "a_content" id="a_content"> </div>
+                                           <!--  <div class = "a_content" id="a_content"> </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -229,16 +228,19 @@
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
         <script src="assets/js/bootbox.min.js"></script>
+        <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
+        <script src="modules/validation/validate.js"></script>
+        <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/equipment.js"></script>
-        <script src="controllers/equipment.js"></script>
+        <script src="modules/ackreciept.js"></script>
+        <script src="controllers/acknowledgementreciept.js"></script>
 
-
+        
 
     </body>
 </html>
