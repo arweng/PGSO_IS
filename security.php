@@ -138,7 +138,7 @@
                                         <a href="security.php">Security<span class="label label-success pull-right">4</span></a>
                                             <ul class="list-unstyled">
                                                 <li><a href="javascript:;">Users</a></li>
-                                                <li><a href="javascript:;">Group</a></li>
+                                                <li><a href="group.php">Group</a></li>
                                                 <li><a href="javascript:;">Privileges</a></li>
                                                 <li><a href="javascript:;">Audit Trail</a></li>
                                             </ul>
@@ -174,7 +174,7 @@
                             <div class="col-sm-12">
                                 <div class="card-box">
                                     <div>
-                                        <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button>
+                                        <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button> -->
                                                 <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
                                                 <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
                                     </div>
