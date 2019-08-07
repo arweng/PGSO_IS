@@ -1,0 +1,59 @@
+<div class="row">
+	<h4 class="page-title">&nbsp;&nbsp;Form</h4>
+	<div class="col-md-10">
+		<ol class="breadcrumb">
+			<li>
+				<a href="index.php">PGSO</a>
+			</li>
+			<li>
+				<a href="">Maintenance</a>
+			</li>
+			<li class="active">
+				Accountable Officer
+			</li>
+		</ol>
+	</div>
+</div>
+<div class="panel panel-border panel-primary">
+	<div class="panel-heading">
+		<h4><i class="icon icon-note"></i> Form
+		<button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+		</h4>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-12">
+			<form name="formHolder.accountable" id="formHolder.accountable" novalidate autocomplete="off">
+				<div class="form-group" ng-class="{'has-error': formHolder.accountable.section.$touched && formHolder.accountable.section.$invalid}">
+					 <div class="col-md-4">
+						<label>Section</label>
+						<input type="text" class="form-control" name="section" ng-model="accountable.section" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.accountable.section.$touched && formHolder.accountable.section.$invalid">This field is required</span>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'has-error': formHolder.accountable.fullname.$touched && formHolder.accountable.fullname.$invalid}">
+					 <div class="col-md-4">
+						<label>Fullname</label>
+						<input type="text" class="form-control" name="fullname" ng-model="accountable.fullname" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.accountable.fullname.$touched && formHolder.accountable.fullname.$invalid">This field is required</span>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{'has-error': formHolder.accountable.position.$touched && formHolder.accountable.position.$invalid}">
+					 <div class="col-md-4">
+						<label>Position</label>
+						<input type="text" class="form-control" name="position" ng-model="accountable.position" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.accountable.position.$touched && formHolder.accountable.position.$invalid">This field is required</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	
+	</div>
+		<hr>
+	<div class="col-md-12">
+		<button type="submit" class="btn btn-default waves-effect waves-light" ng-click="form.save(this)" ng-disabled="controls.ok.btn">{{controls.ok.label}}</button>
+		<button type="submit" class="btn btn-white waves-effect waves-light" ng-click="form.list(this)" style="margin-right: 5px;">{{controls.cancel.label}}</button>
+	</div>
+	
+</div>
+

@@ -1,0 +1,51 @@
+<div class="row">
+	<h4 class="page-title">&nbsp;&nbsp;List</h4>
+	<div class="col-md-10">
+		<ol class="breadcrumb">
+			<li>
+				<a href="index.php">PGSO</a>
+			</li>
+			<li>
+				<a href="">Maintenance</a>
+			</li>
+			<li class="active">
+				Accountable Officer
+			</li>
+		</ol>
+	</div>
+</div>
+<div class="panel panel-border panel-primary">
+	<div class="panel-heading">
+		<h4><i class="icon-people"></i> List
+		<button class="btn btn-linkedin waves-effect waves-light pull-right" ng-click="form.addEdit(this)">Add</button>
+		</h4>
+	</div>
+	<hr>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-12">
+				<table id="accountable" class="table table-striped table-bordered">
+					<thead>
+						<th>No.</th>
+						<th>Section</th>
+						<th>Fullname</th>
+						<th>Position</th>
+						<th>Actions</th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="data in accountables">
+							<td>{{$index+1}}</td>
+							<td>{{data.section}}</td>
+							<td>{{data.fullname}}</td>
+							<td>{{data.position}}</td>
+							<td>
+							<button class="btn btn-success" ng-click="form.addEdit(this,data)">Edit</button>
+							<button class="btn btn-danger" ng-click="form.delete(this,data)">Remove</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

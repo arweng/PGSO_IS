@@ -9,13 +9,10 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Ubold - Responsive Admin Dashboard Template</title>
-
-        <!-- DataTables -->
+        <title>PGSO | Brand</title>
+		
+		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-
-        <!--Morris Chart CSS -->
-         <link rel="stylesheet" href="assets/plugins/morris/morris.css">
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -33,7 +30,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="ackreciept" ng-controller="ackrecieptCtrl" account-profile>
+    <body class="fixed-left" ng-app="accountable" ng-controller="accountableCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -59,12 +56,6 @@
                                 <span class="clearfix"></span>
                             </div>
 
-                            <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
-                                 <input type="text" placeholder="Search..." class="form-control">
-                                 <a href=""><i class="fa fa-search"></i></a>
-                            </form>
- -->
-
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
@@ -75,7 +66,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -110,8 +101,8 @@
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
-                                    <li><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
+                                    <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
@@ -129,7 +120,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span>Maintenance<span class="label label-success pull-right">10</span></a>
+                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">10</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
@@ -140,7 +131,7 @@
                                     <li><a href="security.php">Security<span class="label label-success pull-right">4</span></a></li>
                                     <li><a href="type.php">Type</a></li>
                                     <li><a href="supply.php">Supplier</a></li>
-                                    <li><a href="accountable.php">Accountable Officer</a></li>
+                                    <li class="active"><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -158,38 +149,11 @@
                     <div class="container">
 
                         <!-- Page-Title -->
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h4 class="page-title">Equipment</h4>
-                                <p class="text-muted page-title-alt">Welcome to System</p>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card-box">
-                                    <div>
-                                        <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button> -->
-                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
-                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
-                                    </div>
-                                            <br>
-                                            <div id="content"></div>
-                                        
-<!-- 
-                                        <div class="tab-pane" id="temp_2">
-                                            <div id="AR_form"></div> -->
-                                       
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                           <!--  <div class = "a_content" id="a_content"> </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- row -->
+						<div class="row">
+							<div class="col-lg-12">
+							   <div class = "x_content" id="x_content"> </div> <!-- it will display here -->
+							</div>
+						</div>
                     </div> <!-- container -->
                 </div> <!-- content -->
 
@@ -219,7 +183,7 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
-        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
@@ -235,17 +199,19 @@
         <script src="assets/js/bootbox.min.js"></script>
         <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
+		<!-- blockui -->
+		<script src="modules/blockui/jquery.blockUI.js"></script>
+	
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
+		<script src="modules/blockui/blockui.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/ackreciept.js"></script>
-        <script src="controllers/acknowledgementreciept.js"></script>
-
-        
+        <script src="modules/accountable.js"></script>
+        <script src="controllers/accountable.js"></script>
 
     </body>
 </html>
