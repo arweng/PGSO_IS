@@ -24,25 +24,43 @@
 	<div class="row">
 		<div class="col-md-12">
 			<form name="formHolder.group" id="formHolder.group" novalidate autocomplete="off">
-                <div>
-				<div class="form-group" ng-class="{'has-error': formHolder.group.group_name.$touched && formHolder.group.group_name.$invalid}">
-					 <div class="col-md-4">
-						<label>Group Name:</label>
-						<input type="text" class="form-control" name="group_name" ng-model="group.group_name" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.group.group_name.$touched && formHolder.group.group_name.$invalid">This field is required</span>
+	            <div>
+					<div class="form-group" ng-class="{'has-error': formHolder.group.group_name.$touched && formHolder.group.group_name.$invalid}">
+						 <div class="col-md-4">
+							<label>Group Name:</label>
+							<input type="text" class="form-control" name="group_name" ng-model="group.group_name" ng-disabled="controls.ok.btn" required>
+							<span class="help-block" ng-show="formHolder.group.group_name.$touched && formHolder.group.group_name.$invalid">This field is required</span>
+						</div>
+					</div>
+					<div class="form-group" ng-class="{'has-error': formHolder.group.group_description.$touched && formHolder.group.group_description.$invalid}">
+						 <div class="col-md-4">
+							<label>Description</label>
+							<input type="text" class="form-control" name="group_description" ng-model="group.group_description" ng-disabled="controls.ok.btn">
+	                        <span class="help-block" ng-show="formHolder.group.group_description.$touched && formHolder.group.group_description.$invalid">This field is required</span>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-12">
+				<div class="panel" ng-repeat="p in privileges">
+					<div class="x_title">
+						<label><i class="ti-pencil-alt"></i> {{p.description}}</label>
+						<ul class="nav navbar-right panel_toolbox">
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<div class="row">		
+						<div class="col-md-3 form-group" ng-repeat="pp in p.privileges">
+							<label class="switch">
+							  <input type="checkbox" class="flat" ng-checked="pp.value" ng-model="pp.value" ng-disabled="controls.ok.btn">
+							  <span class="slider round"></span>
+							</label>
+							<h6>{{pp.description}}</h6>
+						</div>
 					</div>
 				</div>
-				<div class="form-group" ng-class="{'has-error': formHolder.group.group_description.$touched && formHolder.group.group_description.$invalid}">
-					 <div class="col-md-4">
-						<label>Description</label>
-						<input type="text" class="form-control" name="group_description" ng-model="group.group_description" ng-disabled="controls.ok.btn">
-                        <span class="help-block" ng-show="formHolder.group.group_description.$touched && formHolder.group.group_description.$invalid">This field is required</span>
-                    </div>
-                </div>
-            </div>
+			</div>
 			</form>
 		</div>
-	
 	</div>
 		<hr>
 	<div class="col-md-12">
