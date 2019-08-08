@@ -107,7 +107,7 @@
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
+                                    <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
                                     <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
@@ -134,8 +134,8 @@
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
-                                    <li class="has_sub">
-                                        <a href="security.php">Security<span class="label label-success pull-right">4</span></a>
+                                    <li class="has_sub avtive">
+                                        <a href="group.php">Security<span class="label label-success pull-right">4</span></a>
                                             <ul class="list-unstyled">
                                                 <li><a href="javascript:;">Users</a></li>
                                                 <li><a href="group.php">Group</a></li>
