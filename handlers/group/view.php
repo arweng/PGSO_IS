@@ -8,7 +8,7 @@ session_start();
 
 $con = new pdo_db();
 
-$group = $con->getData("SELECT * FROM groups WHERE id = $_POST[id]");
+$group = $con->getData("SELECT * FROM groups WHERE group_id = $_POST[id]");
 
 header("Content-Type: application/json");
 echo json_encode($group[0]);

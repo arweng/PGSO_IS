@@ -24,34 +24,68 @@
 	<div class="row">
 		<div class="col-md-12">
 			<form name="formHolder.personnel" id="formHolder.personnel" novalidate autocomplete="off">
-				<div class="form-group" ng-class="{'has-error': formHolder.personnel.firstname.$touched && formHolder.personnel.firstname.$invalid}">
-					 <div class="col-md-4">
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.users_firstname.$touched && formHolder.personnel.users_firstname.$invalid}">
+					<div class="col-md-4">
 						<label>Firstname</label>
-						<input type="text" class="form-control" name="firstname" ng-model="personnel.firstname" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.personnel.firstname.$touched && formHolder.personnel.firstname.$invalid">This field is required</span>
+						<input type="text" class="form-control" name="users_firstname" ng-model="personnel.users_firstname" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.personnel.users_firstname.$touched && formHolder.personnel.users_firstname.$invalid">This field is required</span>
 					</div>
 				</div>
-				<div class="form-group" ng-class="{'has-error': formHolder.personnel.middlename.$touched && formHolder.personnel.middlename.$invalid}">
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.users_middlename.$touched && formHolder.personnel.users_middlename.$invalid}">
 					 <div class="col-md-4">
 						<label>Middlename</label>
-						<input type="text" class="form-control" name="middlename" ng-model="personnel.middlename" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.personnel.middlename.$touched && formHolder.personnel.middlename.$invalid">This field is required</span>
+						<input type="text" class="form-control" name="middlename" ng-model="personnel.users_middlename" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.personnel.users_middlename.$touched && formHolder.personnel.users_middlename.$invalid">This field is required</span>
 					</div>
 				</div>
-				<div class="form-group" ng-class="{'has-error': formHolder.personnel.lastname.$touched && formHolder.personnel.lastname.$invalid}">
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.users_lastname.$touched && formHolder.personnel.users_lastname.$invalid}">
 					 <div class="col-md-4">
 						<label>Lastname</label>
-						<input type="text" class="form-control" name="lastname" ng-model="personnel.lastname" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.personnel.lastname.$touched && formHolder.personnel.lastname.$invalid">This field is required</span>
+						<input type="text" class="form-control" name="lastname" ng-model="personnel.users_lastname" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.personnel.users_lastname.$touched && formHolder.personnel.users_lastname.$invalid">This field is required</span>
 					</div>
 				</div>
-				<div class="form-group" ng-class="{'has-error': formHolder.personnel.position.$touched && formHolder.personnel.position.$invalid}">
+
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.users_department.$touched && formHolder.personnel.users_department.$invalid}">
 					 <div class="col-md-4">
-						<label>Position</label>
-						<input type="text" class="form-control" name="position" ng-model="personnel.position" ng-disabled="controls.ok.btn" required>
-						<span class="help-block" ng-show="formHolder.personnel.position.$touched && formHolder.personnel.position.$invalid">This field is required</span>
+						<label>Department</label>
+						<select class="form-control" name="users_department" ng-model="personnel.users_department" ng-disabled="controls.ok.btn" ng-options="data.department for data in departments track by data.id" required></select>
+						<span class="help-block" ng-show="formHolder.personnel.users_department.$touched && formHolder.personnel.users_department.$invalid">This field is required</span>
 					</div>
 				</div>
+
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.appointment_status.$touched && formHolder.personnel.appointment_status.$invalid}">
+					 <div class="col-md-4">
+						<label>Appointment Status</label>
+						<input type="text" class="form-control" name="appointment_status" ng-model="personnel.appointment_status" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.personnel.appointment_status.$touched && formHolder.personnel.appointment_status.$invalid">This field is required</span>
+					</div>
+				</div>
+
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.username.$touched && formHolder.personnel.username.$invalid}">
+					 <div class="col-md-4">
+						<label>Username</label>
+						<input type="text" class="form-control" name="username" ng-model="personnel.username" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.personnel.username.$touched && formHolder.personnel.username.$invalid">This field is required</span>
+					</div>
+				</div>
+
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.password.$touched && formHolder.personnel.password.$invalid}">
+					 <div class="col-md-4">
+						<label>Password</label>
+						<input type="password" class="form-control" name="password" ng-model="personnel.password" ng-disabled="controls.ok.btn" required>
+						<span class="help-block" ng-show="formHolder.personnel.password.$touched && formHolder.personnel.password.$invalid">This field is required</span>
+					</div>
+				</div>
+
+				<div class="form-group" ng-class="{'has-error': formHolder.personnel.groups.$touched && formHolder.personnel.groups.$invalid}">
+					 <div class="col-md-4">
+						<label>Group</label>
+						<select class="form-control" name="groups" ng-model="personnel.groups" ng-disabled="controls.ok.btn" ng-options="data.group_name for data in groups track by data.group_id" required></select>
+						<span class="help-block" ng-show="formHolder.personnel.groups.$touched && formHolder.personnel.groups.$invalid">This field is required</span>
+					</div>
+				</div>
+				
 			</form>
 		</div>
 	

@@ -8,9 +8,9 @@ session_start();
 
 $con = new pdo_db();
 
-$personnel = $con->getData("SELECT * FROM personnel");
+$user = $con->getData("SELECT * FROM users_tbl");
 
 header("Content-Type: application/json");
-echo json_encode($personnel);
+echo json_encode($user);
 
 ?>

@@ -22,7 +22,7 @@ function form(){
 		};
 			
 		scope.group = {};
-		scope.group.id = 0;
+		scope.group.group_id = 0;
 
 		scope.groups = []; // list
 		
@@ -35,7 +35,7 @@ function form(){
 		$http({
 		  method: 'POST',
 		  url: 'handlers/privileges.php',
-		  data: {id: scope.group.id}
+		  data: {id: scope.group_id}
 		}).then(function mySuccess(response) {
 			
 			scope.privileges = angular.copy(response.data);
@@ -53,7 +53,7 @@ function form(){
 		bui.show();
 		
 		scope.group = {};
-		scope.group.id = 0;
+		scope.group.group_id = 0;
 		
 		$http({
 		  method: 'POST',
@@ -116,7 +116,7 @@ function form(){
 	self.addEdit = function(scope,row) {	
 		
 		scope.group = {};
-		scope.group.id = 0;
+		scope.group.group_id = 0;
 
 		mode(scope,row);
 
@@ -133,7 +133,7 @@ function form(){
 			$http({
 			  method: 'POST',
 			  url: 'handlers/group/view.php',
-			  data: {id: row.id}
+			  data: {id: row.group_id}
 			}).then(function mySucces(response) {
 				
 				angular.copy(response.data, scope.group);
@@ -167,8 +167,8 @@ function form(){
 		data: {group: scope.group, privileges: scope.privileges}
 		}).then(function mySucces(response) {
 			
-			if (scope.group.id == 0) {
-				scope.group.id = response.data;
+			if (scope.group.group_id == 0) {
+				scope.group.group_id = response.data;
 				growl.show('btn btn-success',{from: 'top', amount: 55},' Information successfully added.');
 				}	else{
 					growl.show('btn btn-success',{from: 'top', amount: 55},' Information successfully updated.');

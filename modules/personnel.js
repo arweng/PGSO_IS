@@ -25,9 +25,38 @@ function form(){
 		scope.personnel.id = 0;
 
 		scope.personnels = []; // list
-		
 
 	};
+
+	function groups(scope){
+
+		$http({
+
+			url: "api/suggestions/groups.php",
+			method: "POST"
+		}).then(function success(res){
+
+			scope.groups = res.data;
+		}, function error(res){
+
+			//error
+		});
+	}
+
+	function departments(scope){
+
+		$http({
+
+			url: "api/suggestions/departments.php",
+			method: "POST"
+		}).then(function success(res){
+
+			scope.departments = res.data;
+		}, function error(res){
+
+			//error
+		});
+	}
 	
 	self.list = function(scope) {
 			
@@ -123,6 +152,8 @@ function form(){
 				
 			});					
 		};
+		groups(scope);
+		departments(scope);
 	
 	};
 	
@@ -140,9 +171,9 @@ function form(){
 		}
 		
 		$http({
-		  method: 'POST',
-		  url: 'handlers/personnel/save.php',
-		data: {personnel: scope.personnel}
+			method: 'POST',
+			url: 'handlers/personnel/save.php',
+			data: {personnel: scope.personnel}
 		}).then(function mySucces(response) {
 			
 			if (scope.personnel.id == 0) {

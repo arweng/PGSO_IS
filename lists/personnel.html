@@ -30,16 +30,18 @@
 						<th>Firstname</th>
 						<th>Middlename</th>
 						<th>Lastname</th>
-						<th>Position</th>
+						<th>Appointment Status</th>
+						<th>Department</th>
 						<th>Actions</th>
 					</thead>
 					<tbody>
 						<tr ng-repeat="data in personnels">
 							<td>{{$index+1}}</td>
-							<td>{{data.firstname}}</td>
-							<td>{{data.middlename}}</td>
-							<td>{{data.lastname}}</td>
-							<td>{{data.position}}</td>
+							<td>{{data.users_firstname}}</td>
+							<td>{{data.users_middlename}}</td>
+							<td>{{data.users_lastname}}</td>
+							<td>{{data.appointment_status}}</td>
+							<td>{{data.users_department}}</td>
 							<td>
 							<button class="btn btn-success" ng-click="form.addEdit(this,data)">Edit</button>
 							<button class="btn btn-danger" ng-click="form.delete(this,data)">Remove</button>
