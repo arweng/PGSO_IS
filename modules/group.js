@@ -22,19 +22,38 @@ function form(){
 		};
 			
 		scope.group = {};
-		scope.group.group_id = 0;
+		scope.group.id = 0;
 
 		scope.groups = []; // list
 		
 
 	};
+
+	function privileges(scope) {
+		console.log(scope);
+			
+		$http({
+		  method: 'POST',
+		  url: 'handlers/privileges.php',
+		  data: {id: scope.group.id}
+		}).then(function mySuccess(response) {
+			
+			scope.privileges = angular.copy(response.data);
+			
+		}, function myError(response) {
+			
+			//
+			
+		});				
+		
+	};	
 	
 	self.list = function(scope) {
 			
 		bui.show();
 		
 		scope.group = {};
-		scope.group.group_id = 0;
+		scope.group.id = 0;
 		
 		$http({
 		  method: 'POST',
@@ -97,9 +116,11 @@ function form(){
 	self.addEdit = function(scope,row) {	
 		
 		scope.group = {};
-		scope.group.group_id = 0;
-		
+		scope.group.id = 0;
+
 		mode(scope,row);
+
+		privileges(scope);
 		
 		$('#x_content').html(loading);
 		$('#x_content').load('forms/group.html',function() {
@@ -112,10 +133,11 @@ function form(){
 			$http({
 			  method: 'POST',
 			  url: 'handlers/group/view.php',
-			  data: {id: row.group_id}
+			  data: {id: row.id}
 			}).then(function mySucces(response) {
 				
 				angular.copy(response.data, scope.group);
+				privileges(scope);
 				
 			}, function myError(response) {
 				 
@@ -142,11 +164,11 @@ function form(){
 		$http({
 		  method: 'POST',
 		  url: 'handlers/group/save.php',
-		data: {group: scope.group}
+		data: {group: scope.group, privileges: scope.privileges}
 		}).then(function mySucces(response) {
 			
-			if (scope.group.group_id == 0) {
-				scope.group.group_id = response.data;
+			if (scope.group.id == 0) {
+				scope.group.id = response.data;
 				growl.show('btn btn-success',{from: 'top', amount: 55},' Information successfully added.');
 				}	else{
 					growl.show('btn btn-success',{from: 'top', amount: 55},' Information successfully updated.');
@@ -170,7 +192,7 @@ function form(){
 			$http({
 			  method: 'POST',
 			  url: 'handlers/group/delete.php',
-			  data: {id: [row.group_id]}
+			  data: {id: [row.id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);

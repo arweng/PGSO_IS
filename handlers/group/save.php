@@ -1,17 +1,27 @@
 <?php
 
-header("Content-Type: application/json");
+// header("Content-Type: application/json");
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
 include_once '../../db.php';
+require_once '../../classes.php';
 
 $con = new pdo_db("groups");
 
-
-if ($_POST['group']['group_id']) {
+$privileges = [];
+if (isset($_POST['privileges'])) {
 	
-	$group = $con->updateObj($_POST['group'],'group_id');
+	$arrayHex = new ArrayHex();
+		
+	$privileges = $arrayHex->toHex(json_encode($_POST['privileges']));
+	$_POST['group']['privileges'] = $privileges;
+	
+};
+
+if ($_POST['group']['id']) {
+	
+	$group = $con->updateObj($_POST['group'],'id');
 	
 } else {
 	
