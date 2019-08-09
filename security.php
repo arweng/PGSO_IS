@@ -134,7 +134,7 @@
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
-                                    <li class="has_sub avtive">
+                                    <li class="has_sub active">
                                         <a href="group.php">Security<span class="label label-success pull-right">4</span></a>
                                             <ul class="list-unstyled">
                                                 <li><a href="javascript:;">Users</a></li>
