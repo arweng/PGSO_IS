@@ -128,10 +128,19 @@
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
-                                    <li><a href="security.php">Security<span class="label label-success pull-right">4</span></a></li>
+
                                     <li><a href="type.php">Type</a></li>
                                     <li><a href="supply.php">Supplier</a></li>
                                     <li><a href="accountable.php">Accountable Officer</a></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub">
+                                <a href="security.php" class="waves-effect"><i class="md md-vpn-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="javascript:;">Users</a></li>
+                                    <li><a href="group.php">Group</a></li>
+                                    <li><a href="javascript:;">Privileges</a></li>
+                                    <li><a href="javascript:;">Audit Trail</a></li>
                                 </ul>
                             </li>
                         </ul>
