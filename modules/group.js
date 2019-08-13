@@ -30,12 +30,11 @@ function form(){
 	};
 
 	function privileges(scope) {
-		console.log(scope);
-			
+		
 		$http({
 		  method: 'POST',
 		  url: 'handlers/privileges.php',
-		  data: {id: scope.group_id}
+		  data: {group_id: scope.group.group_id}
 		}).then(function mySuccess(response) {
 			
 			scope.privileges = angular.copy(response.data);
@@ -117,9 +116,11 @@ function form(){
 		
 		scope.group = {};
 		scope.group.group_id = 0;
-
+		
 		mode(scope,row);
-
+		
+		console.log(scope);
+		
 		privileges(scope);
 		
 		$('#x_content').html(loading);
@@ -133,7 +134,7 @@ function form(){
 			$http({
 			  method: 'POST',
 			  url: 'handlers/group/view.php',
-			  data: {id: row.group_id}
+			  data: {group_id: row.group_id}
 			}).then(function mySucces(response) {
 				
 				angular.copy(response.data, scope.group);
@@ -192,7 +193,7 @@ function form(){
 			$http({
 			  method: 'POST',
 			  url: 'handlers/group/delete.php',
-			  data: {id: [row.id]}
+			  data: {group_id: [row.group_id]}
 			}).then(function mySucces(response) {
 
 				self.list(scope);

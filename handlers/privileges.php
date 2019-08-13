@@ -8,7 +8,7 @@ require_once '../classes.php';
 
 $con = new pdo_db("groups");
 
-$group_privileges = $con->get(array("id"=>$_POST['id']),["privileges"]);
+$group_privileges = $con->get(array("group_id"=>$_POST['group_id']),["privileges"]);
 
 if (count($group_privileges)) {
 	
