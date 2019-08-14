@@ -30,7 +30,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="equipments" ng-controller="equipmentCtrl" account-profile>
+    <body class="fixed-left" ng-app="group " ng-controller="groupCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -72,7 +72,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -135,11 +135,10 @@
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
                                     <li class="has_sub active">
-                                        <a href="group.php">Security<span class="label label-success pull-right">4</span></a>
+                                        <a href="#">Security<span class="label label-success pull-right">4</span></a>
                                             <ul class="list-unstyled">
-                                                <li><a href="javascript:;">Users</a></li>
+                                                <!-- <li><a href="javascript:;">Users</a></li> -->
                                                 <li><a href="group.php">Group</a></li>
-                                                <li><a href="javascript:;">Privileges</a></li>
                                                 <li><a href="javascript:;">Audit Trail</a></li>
                                             </ul>
                                     </li>
@@ -245,8 +244,8 @@
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/equipment_new.js"></script>
-        <script src="controllers/equipment.js"></script>
+        <script src="modules/group.js"></script>
+        <script src="controllers/group.js"></script>
 
 
 
