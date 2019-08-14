@@ -28,7 +28,7 @@ define('system_privileges', array(
 		 ),
 	),array(
 		 "id"=>"maintenance",
-		 "description"=>"Report",
+		 "description"=>"Maintenance",
 		 "privileges"=>array(
 		 array("id"=>1,"description"=>"Show Report","value"=>false),
 		 ),

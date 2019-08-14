@@ -100,7 +100,7 @@
 
                             <li><a href="index.php" class="waves-effect active"><i class="ti-home active"></i><span> Dashboard </span></a>
                             </li>
-                            <li class="has_sub">
+                            <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
                                 <a href="Equipments.php" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
@@ -110,7 +110,7 @@
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub">
+                            <li class="has_sub" ng-show="accountProfile.pages_access.report.value">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
@@ -122,7 +122,7 @@
 
                                 </ul>
                             </li>
-                            <li class="has_sub">
+                            <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">10</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
