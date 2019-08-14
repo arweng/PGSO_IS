@@ -136,7 +136,6 @@ function form(){
 				
 			});					
 		};
-
 		types(scope);
 	
 	};

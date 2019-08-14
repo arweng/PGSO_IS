@@ -9,9 +9,9 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>PGSO | Brand</title>
-		
-		<!-- DataTables -->
+        <title>PGSO Inventory System | Personnel</title>
+        
+        <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -66,7 +66,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -149,11 +149,12 @@
                     <div class="container">
 
                         <!-- Page-Title -->
-						<div class="row">
-							<div class="col-lg-12">
-							   <div class = "x_content" id="x_content"> </div> <!-- it will display here -->
-							</div>
-						</div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                               <div class = "x_content" id="x_content"></div>
+                                <!-- it will display here -->
+                            </div>
+                        </div>
                     </div> <!-- container -->
                 </div> <!-- content -->
 
@@ -164,8 +165,6 @@
             </div>
         </div>
         <!-- END wrapper -->
-
-
 
         <script>
             var resizefunc = [];
@@ -183,8 +182,9 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
-		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -199,13 +199,13 @@
         <script src="assets/js/bootbox.min.js"></script>
         <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
-		<!-- blockui -->
-		<script src="modules/blockui/jquery.blockUI.js"></script>
-	
+        <!-- blockui -->
+        <script src="modules/blockui/jquery.blockUI.js"></script>
+    
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
-		<script src="modules/blockui/blockui.js"></script>
+        <script src="modules/blockui/blockui.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>

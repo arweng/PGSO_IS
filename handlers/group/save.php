@@ -19,9 +19,9 @@ if (isset($_POST['privileges'])) {
 	
 };
 
-if ($_POST['group']['id']) {
+if ($_POST['group']['group_id']) {
 	
-	$group = $con->updateObj($_POST['group'],'id');
+	$group = $con->updateObj($_POST['group'],'group_id');
 	
 } else {
 	

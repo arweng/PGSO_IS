@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Equipment</title>
+        <title>PGSO Inventory System | Fill Equipment</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -102,7 +102,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
-                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>

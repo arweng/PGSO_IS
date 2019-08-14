@@ -10,6 +10,6 @@ session_start();
 
 $con = new pdo_db("groups");
 
-$delete = $con->deleteData(array("id"=>implode(",",$_POST['id'])));	
+$delete = $con->deleteData(array("group_id"=>implode(",",$_POST['group_id'])));	
 
 ?>
