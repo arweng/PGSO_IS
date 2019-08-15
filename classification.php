@@ -66,15 +66,11 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
-                                </li>
-                                <li class="hidden-xs">
-                                    <br>
-                                    <span style="color: white;">{{accountProfile.fullname}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +98,7 @@
                                 </li>
                                <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
                             </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
+                            <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
@@ -112,7 +108,7 @@
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.report.value">
+                            <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
@@ -123,8 +119,8 @@
                                     <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
-                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">9</span></a>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">10</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li class="active"><a href="classification.php">Classification</a></li>
@@ -132,18 +128,10 @@
                                     <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
                                     <li><a href="units.php">Units</a></li>
+                                    <li><a href="security.php">Security<span class="label label-success pull-right">4</span></a></li>
                                     <li><a href="type.php">Type</a></li>
                                     <li><a href="supply.php">Supplier</a></li>
                                     <li><a href="accountable.php">Accountable Officer</a></li>
-                                </ul>
-                            </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
-                                <ul class="list-unstyled">
-                                    <!-- <li><a href="javascript:;">Users</a></li> -->
-                                    <li><a href="group.php">Group</a></li>
-                                    <li><a href="javascript:;">Users</a></li>
-                                    <li><a href="javascript:;">Audit Trail</a></li>
                                 </ul>
                             </li>
                         </ul>
