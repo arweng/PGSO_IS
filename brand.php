@@ -41,7 +41,8 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
+                    <a href="index.php" class="logo"><i class="icon-c-logo"><img src="images/logo/pgso_logo_2.png" width="50" height="50"> </i><span><i><img class="company-logo" src="images/logo/pgso_logo_1.png" width="65" height="65"></i></span></a>
+
                     </div>
                 </div>
 
@@ -66,7 +67,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle">{{accountProfile.fullname}} </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
