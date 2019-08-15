@@ -26,11 +26,18 @@ define('system_privileges', array(
 		 "privileges"=>array(
 		 array("id"=>1,"description"=>"Show Report","value"=>false),
 		 ),
+
 	),array(
 		 "id"=>"maintenance",
 		 "description"=>"Maintenance",
 		 "privileges"=>array(
 		 array("id"=>1,"description"=>"Show Report","value"=>false),
+		 ),
+	),array(
+		 "id"=>"security",
+		 "description"=>"Security",
+		 "privileges"=>array(
+		 array("id"=>1,"description"=>"Show Security","value"=>false),
 		 ),
 	),
 	
