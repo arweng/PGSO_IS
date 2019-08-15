@@ -76,11 +76,9 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-<<<<<<< HEAD
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}} </a>
-=======
+
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
->>>>>>> refs/remotes/origin/darwin
+
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
