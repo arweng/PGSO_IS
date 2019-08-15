@@ -1,4 +1,6 @@
-<?php include_once 'authentication.php'; ?>
+<!-- <?php 
+// include_once 'authentication.php'; 
+?> -->
 <!DOCTYPE html>
 <html>
     <head>
