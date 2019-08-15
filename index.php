@@ -99,8 +99,19 @@ include_once 'authentication.php';
                     <!--- Divider -->
                     <div id="sidebar-menu">
                          <ul>
-
+                                <!-- <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="{{accountProfile.picture}}" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>{{accountProfile.fullname}}</h2>
+				<h6 class="text-default">{{accountProfile.account_type}}</h6>
+              </div>
+            </div> -->
+                            <br>
                             <li class="text-muted menu-title">Navigation</li>
+
 
                             <li><a href="index.php" class="waves-effect active"><i class="ti-home active"></i><span> Dashboard </span></a>
                             </li>
