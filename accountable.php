@@ -66,7 +66,7 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -111,8 +111,8 @@
                             <li class="has_sub">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="javascript:;">Property Acknowledgement Receipt</a></li>
-                                    <li><a href="javascript:;">Property Return Slip</a></li>
+                                    <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
+                                    <li><a href="returnSlip_report.php">Property Return Slip</a></li>
                                     <li><a href="javascript:;">Inventory of Equipment</a></li>
                                     <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
                                     <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
