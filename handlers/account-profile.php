@@ -30,24 +30,21 @@ $_SESSION['account'] = $account[0];
 
 $con->table = "groups";
 
-// $group_privileges = $con->get(array("group_id"=>$account[0]['groups']),["privileges"]);
+$group_privileges = $con->get(array("group_id"=>$account[0]['groups']),["privileges"]);
 
-
-$group_privileges = $con->get(array("group_id"=>$_POST['group_id']),["privileges"]);
 $pages_access = [];
+
 if (count($group_privileges)) {
 	
 	if ($group_privileges[0]['privileges']!=NULL) {
-		
+
 		$privileges_obj = new privileges(system_privileges,$group_privileges[0]['privileges']);
-		$privileges = $privileges_obj->getPrivileges();
+		$pages_access = $privileges_obj->getPagesPrivileges();
 
-    }
+	};
 }
+
 $account[0]['pages_access'] = $pages_access;
-
-
-//$profile['picture'] = $picture;
 
 echo json_encode($account[0]);
 
