@@ -68,17 +68,14 @@
                                 </li>
                                 <li class="dropdown">
 
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}}</a>
 
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
-                                <li class="hidden-xs">
-                                    <br>
-                                    <span style="color: white;">{{accountProfile.fullname}}</span>
-                                </li>
+                               
                             </ul>
                         </div>
                         <!--/.nav-collapse -->

@@ -73,10 +73,7 @@
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
-                                <li class="hidden-xs">
-                                    <br>
-                                    <span style="color: white;">{{accountProfile.fullname}}</span>
-                                </li>
+                                
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
