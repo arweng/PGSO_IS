@@ -68,14 +68,14 @@ include_once 'authentication.php';
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
+                                        <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">99</span>
                                     </a>
                                 </li>
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"></a>
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}} </a>
                                     
                                     <ul class="dropdown-menu">
 
@@ -83,10 +83,7 @@ include_once 'authentication.php';
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
-                                <li class="hidden-xs">
-                                    <br>
-                                    <span style="color: white;">{{accountProfile.fullname}}</span>
-                                </li>
+                             
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
@@ -99,21 +96,27 @@ include_once 'authentication.php';
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
-                <div class="sidebar-inner slimscrollleft">
+                <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}} <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>                                    
+                                    <li><a href="#"><i class="md md-settings"></i> Settings</a></li>
+                                    <li><a href="javascript:;" logout-account><i class="md md-settings-power"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                            <p class="text-muted m-0">{{accountProfile.account_type}}</p>
+                        </div>
+                    </div>
+
                     <!--- Divider -->
                     <div id="sidebar-menu">
                          <ul>
-                                <!-- <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="{{accountProfile.picture}}" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>{{accountProfile.fullname}}</h2>
-				<h6 class="text-default">{{accountProfile.account_type}}</h6>
-              </div>
-            </div> -->
-                            <br>
                             <li class="text-muted menu-title">Navigation</li>
 
 

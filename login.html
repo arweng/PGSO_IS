@@ -14,7 +14,7 @@ if (isset($_SESSION['users_id'])) header("location: index.php");
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Ubold - Responsive Admin Dashboard Template</title>
+        <title>PGSO | LOG-IN</title>
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -40,7 +40,9 @@ if (isset($_SESSION['users_id'])) header("location: index.php");
         <div class="wrapper-page">
         	<div class=" card-box">
             <div class="panel-heading"> 
-                <h3 class="text-center"> Sign In to <strong class="text-custom">UBold</strong> </h3>
+                   <h2 class="text-center"><span><i><img class="company-logo" src="images/logo/pgso_logo_1.jpg" width="65" height="65"></i></span></h2> 
+                <h3 class="text-center"> Sign In to <strong class="text-custom">PGSO SERVICES</strong> </h3>
+                
             </div> 
 
 
