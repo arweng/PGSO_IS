@@ -34,8 +34,8 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 				//error
 			});
 
-			$('#content').load('forms/acknowledge_folder/acknowledgementlist.html', function() {
-				$timeout(function() { $compile($('#content')[0])(scope); },100);								
+			$('#x_content').load('forms/acknowledge_folder/acknowledgementlist.html', function() {
+				$timeout(function() { $compile($('#x_content')[0])(scope); },100);								
 				// instantiate datable
 				$timeout(function() {
 					$('#sample').DataTable({

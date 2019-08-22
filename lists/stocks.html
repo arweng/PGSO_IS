@@ -1,53 +1,3 @@
-<!-- 
-<div class="panel panel-border panel-primary">
-  <div id="datatable-editable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-    <div class="panel-body">
-      <table id="equipment" class="table table-striped m-0">
-        <thead>
-          <tr role="row">
-            <th class='sorting_1'>Stock ID</th>
-            <th>Property No</th>
-            <th>Description</th>
-            <th>Model</th>
-            <th>Acquisition</th>
-            <th>Acquisition Date</th>
-            <th>Acquisition Cost</th>
-            <th>Serial</th>
-            <th>Inventory Tag</th>
-            <th>Classification</th>
-            <th>Condition</th>
-            <th>Supplier</th>
-            <th>Remarks</th> 
-            <th>&nbsp;Action(s)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="u in inputs" class="gradeC odd" role="row">
-            <td>{{data.id}}</td>
-            <td>{{data.property_no}}</td>
-            <td>{{data.description}}</td>
-            <td>{{data.model}}</td>
-             <td>{{data.acquisition}}</td>
-            <td>{{data._date}}</td>
-            <td>{{data.acquisition_cost}}</td>
-            <td>{{data._serial}}</td>
-            <td>{{data.inventory_tag}}</td>
-            <td>{{data.classification}}</td>
-            <td>{{data._condition}}</td>
-            <td>{{data.supplier}}</td>
-            <td>{{data.remarks}}</td>
-            <td>
-              <a class="on-default edit-row"> <button ng-click='myEquipment.equipAdd(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-pencil"></i> </button></a>
-              <a class="on-default remove-row"> <button ng-click='myEquipment.equipDelete(this,u)' class="btn btn-info waves-effect waves-light btn-sm" id="sa-success"><i class="fa fa-trash-o"></i> </button></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div> -->
-
-
 <div class="row">
         <h4 class="page-title">&nbsp;&nbsp;List</h4>
         <div class="col-md-10">
@@ -56,10 +6,10 @@
                     <a href="index.php">PGSO</a>
                 </li>
                 <li>
-                    <a href="">Maintenance</a>
+                    <a href="">Equipment</a>
                 </li>
                 <li class="active">
-                    Model
+                    Fill Equipments
                 </li>
             </ol>
         </div>

@@ -66,18 +66,18 @@
  -->
 
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                                <!-- <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                                        <li><a href="profile-setting.php"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
@@ -105,9 +105,9 @@
                             <li class="text-muted menu-title">Navigation</li>
                             <li class="has_sub">
                                 <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
-                                    <ul class="list-unstyled">
+                                    <!-- <ul class="list-unstyled">
                                         <li><a href="#">Fill in Equipment</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
                             </li>
@@ -147,7 +147,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                                <a href="#" class="waves-effect"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
                                 <ul class="list-unstyled">
                                     <!-- <li><a href="javascript:;">Users</a></li> -->
                                     <li><a href="group.php">Group</a></li>
@@ -172,38 +172,11 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="page-title">Equipment</h4>
-                                <p class="text-muted page-title-alt">Welcome to System</p>
+                                <div class = "x_content" id="x_content"></div>
                             </div>
                         </div>
-                        
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card-box">
-                                    <div>
-                                        <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button> -->
-                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
-                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
-                                    </div>
-                                            <br>
-                                            <div id="content"></div>
-                                        
-<!-- 
-                                        <div class="tab-pane" id="temp_2">
-                                            <div id="AR_form"></div> -->
-                                       
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                           <!--  <div class = "a_content" id="a_content"> </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- row -->
-                    </div> <!-- container -->
-                </div> <!-- content -->
+                    </div>
+                </div>
 
                 <footer class="footer text-right">
                    Copyright &copy; <?php echo date("Y"); ?>

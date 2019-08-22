@@ -1,0 +1,174 @@
+[16-Aug-2019 04:00:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:00:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'Cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:01:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'cost' for column 'acquisition_cost' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:02:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'tag' for column 'inventory_tag' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:02:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'tag' for column 'inventory_tag' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:02:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'tag' for column 'inventory_tag' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268
+[16-Aug-2019 04:02:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: 'tag' for column 'inventory_tag' at row 1 in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php:268
+Stack trace:
+#0 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php(268): PDOStatement->execute(Array)
+#1 C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\handlers\equipment\save.php(19): pdo_db->insertObj(Array)
+#2 {main}
+  thrown in C:\Users\Admin\Desktop\UwAmp\UwAmp\www\PGSO_IS\db.php on line 268

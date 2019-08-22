@@ -74,7 +74,7 @@
                                     <div class="form-group">
                                             <label class="col-md-4 control-label">Acquisition Cost </label>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control" name="acquisition_cost" ng-model="input.acquisition_cost" ng-class="{'parsley-error': formHolder.input.acquisition_cost.$touched && formHolder.input.acquisition_cost.$invalid}" ng-disabled = "controls.ok.btn" required>
+                                                <input type="number" class="form-control" name="acquisition_cost" ng-model="input.acquisition_cost" ng-class="{'parsley-error': formHolder.input.acquisition_cost.$touched && formHolder.input.acquisition_cost.$invalid}" ng-disabled = "controls.ok.btn" required>
                                                 <span class="text-danger" ng-show="formHolder.input.acquisition_cost.$touched && formHolder.input.acquisition_cost.$invalid"> Please Indicate Cost</span>            
                                             </div>
                                         </div>
@@ -88,14 +88,14 @@
                                     <div class="form-group">
                                             <label class="col-md-4 control-label">Serial </label>
                                             <div class="col-md-8">
-                                                <input type="text" class="form-control" name="_serial" ng-model="input._serial" ng-class="{'parsley-error': formHolder.input._serial.$touched && formHolder.input._serial.$invalid}" ng-disabled = "controls.ok.btn" required>
+                                                <input type="number" class="form-control" name="_serial" ng-model="input._serial" ng-class="{'parsley-error': formHolder.input._serial.$touched && formHolder.input._serial.$invalid}" ng-disabled = "controls.ok.btn" required>
                                                 <span class="text-danger" ng-show="formHolder.input._serial.$touched && formHolder.input._serial.$invalid"> Please Indicate Serial</span>            
                                             </div>
                                         </div>
                                         <div class="form-group">
                                                 <label class="col-md-4 control-label">Inventory Tag </label>
                                                 <div class="col-md-8">
-                                                    <input type="text" class="form-control" name="inventory_tag" ng-model="input.inventory_tag" ng-class="{'parsley-error': formHolder.input.inventory_tag.$touched && formHolder.input.inventory_tag.$invalid}" ng-disabled = "controls.ok.btn" required>
+                                                    <input type="number" class="form-control" name="inventory_tag" ng-model="input.inventory_tag" ng-class="{'parsley-error': formHolder.input.inventory_tag.$touched && formHolder.input.inventory_tag.$invalid}" ng-disabled = "controls.ok.btn" required>
                                                     <span class="text-danger" ng-show="formHolder.input.inventory_tag.$touched && formHolder.input.inventory_tag.$invalid"> Please Indicate Inventory Tag</span>            
                                                 </div>
                                             </div>
