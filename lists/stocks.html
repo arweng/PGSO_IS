@@ -1,69 +1,51 @@
 <div class="row">
-        <h4 class="page-title">&nbsp;&nbsp;List</h4>
-        <div class="col-md-10">
-            <ol class="breadcrumb">
-                <li>
-                    <a href="index.php">PGSO</a>
-                </li>
-                <li>
-                    <a href="">Equipment</a>
-                </li>
-                <li class="active">
-                    Fill Equipments
-                </li>
-            </ol>
-        </div>
+    <h4 class="page-title">&nbsp;&nbsp;List</h4>
+    <div class="col-md-10">
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.php">PGSO</a>
+            </li>
+            <li>
+                <a href="">Equipment</a>
+            </li>
+            <li class="active">
+                Fill Equipments
+            </li>
+        </ol>
     </div>
-    <div class="panel panel-border panel-primary">
-        <div class="panel-heading">
-            <h4><i class="icon-people"></i> List
-            <button class="btn btn-linkedin waves-effect waves-light pull-right" ng-click="form.addEdit(this)">Add</button>
-            </h4>
-        </div>
-        <hr>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-12">
-                    <table id="equipment" class="table table-striped table-bordered">
-                        <thead>
-                                <th>Stock ID</th>
-                                <th>Property No</th>
-                                <th>Description</th>
-                                <th>Model</th>
-                                <!-- <th>Acquisition</th>
-                                <th>Acquisition Date</th>
-                                <th>Acquisition Cost</th>
-                                <th>Serial</th>
-                                <th>Inventory Tag</th>
-                                <th>Classification</th>
-                                <th>Condition</th>
-                                <th>Supplier</th>
-                                <th>Remarks</th> -->
-                            <th>Actions</th>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="data in inputs">
-                                <td>{{data.id}}</td>
-                                <td>{{data.property_no}}</td>
-                                <td>{{data.description}}</td>
-                                <td>{{data.model}}</td>
-                                <!-- <td>{{data.acquisition}}</td>
-                                <td>{{data._date}}</td>
-                                <td>{{data.acquisition_cost}}</td>
-                                <td>{{data._serial}}</td>
-                                <td>{{data.inventory_tag}}</td>
-                                <td>{{data.classification}}</td>
-                                <td>{{data._condition}}</td>
-                                <td>{{data.supplier}}</td>
-                                <td>{{data.remarks}}</td> -->
-                                <td>
-                                <button class="btn btn-success" ng-click="form.addEdit(this,data)">Edit</button>
-                                <button class="btn btn-danger" ng-click="form.delete(this,data)">Remove</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+</div>
+<div class="panel panel-border panel-primary">
+    <div class="panel-heading">
+        <h4><i class="icon-people"></i> List
+        <button class="btn btn-linkedin waves-effect waves-light pull-right" ng-click="form.addEdit(this)">Add</button>
+        </h4>
+    </div>
+    <hr>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="equipment" class="table table-striped table-bordered">
+                    <thead>
+                        <th>Stock ID</th>
+                        <th>Property No</th>
+                        <th>Description</th>
+                        <th>Model</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="data in inputs">
+                            <td>{{data.id}}</td>
+                            <td>{{data.property_no}}</td>
+                            <td>{{data.description}}</td>
+                            <td>{{data.model}}</td>
+                            <td>
+                            <button class="btn btn-success" ng-click="form.addEdit(this,data)">Edit</button>
+                            <button class="btn btn-danger" ng-click="form.delete(this,data)">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+</div>

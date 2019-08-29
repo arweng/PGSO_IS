@@ -44,7 +44,7 @@ include_once 'authentication.php';
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
+                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
                     </div>
                 </div>
 
@@ -79,6 +79,7 @@ include_once 'authentication.php';
                                     
                                     
                                     <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="icon-user m-r-5"></i> Profile</a></li>
                                         <li><a href="profile-setting.php"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
@@ -99,7 +100,17 @@ include_once 'authentication.php';
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
-                <div class="sidebar-inner slimscrollleft">
+                <div class="slimScrollDiv" style="position: relative; overflow: inherit; width: auto; height: 1347px;">
+                <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}}</a>
+                            <p class="text-muted m-0">{{accountProfile.account_type}}</p>
+                        </div>
+                    </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
                          <ul>
@@ -113,8 +124,8 @@ include_once 'authentication.php';
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
                                     <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
-                                    <li><a href="javascript:;">Return Slip</a></li>
-                                    <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
+                                    <li><a href="returnslip.php">Return Slip</a></li>
+                                    <li><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
                             </li>
@@ -158,6 +169,7 @@ include_once 'authentication.php';
                     </div>
                     <div class="clearfix"></div>
                 </div>
+            </div>
             </div>
             <!-- Left Sidebar End -->
 

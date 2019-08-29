@@ -88,7 +88,16 @@
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
-                <div class="sidebar-inner slimscrollleft">
+                <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}}</a>
+                            <p class="text-muted m-0">{{accountProfile.account_type}}</p>
+                        </div>
+                    </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
@@ -186,7 +195,8 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.editInfo(this)"><i class="fa" ng-class="{'fa-edit': settings.btns.info.edit, 'fa-ban': !settings.btns.info.edit}"></i></button>
+                                            <h3><i class="icon icon-user"></i> Account Info<button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.editInfo(this)"><i class="fa" ng-class="{'fa-edit': settings.btns.info.edit, 'fa-ban': !settings.btns.info.edit}"></i></button></h3>
+                                            
                                             <form name="formHolder.info" id="formHolder.info" novalidate autocomplete="off">
                                                 <div class="form-group">
                                                      <div class="col-md-12">
@@ -207,7 +217,8 @@
                                     <!-- </div>
                                     <div class="row"> -->
                                         <div class="col-md-6">
-                                            <button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.editSecurity(this)"><i class="fa" ng-class="{'fa-edit': settings.btns.security.edit, 'fa-ban': !settings.btns.security.edit}"></i></button>
+                                            <h3><i class="icon icon-lock"></i> Account Security<button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.editSecurity(this)"><i class="fa" ng-class="{'fa-edit': settings.btns.security.edit, 'fa-ban': !settings.btns.security.edit}"></i></button></h3>
+                                            
                                             <form name="formHolder.security" id="formHolder.security" novalidate autocomplete="off">
                                                 <div class="form-group">
                                                      <div class="col-md-12">

@@ -88,7 +88,16 @@
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
-                <div class="sidebar-inner slimscrollleft">
+                <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}}</a>
+                            <p class="text-muted m-0">{{accountProfile.account_type}}</p>
+                        </div>
+                    </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
@@ -106,8 +115,8 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
-                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
-                                    <li><a href="javascript:;">Return Slip</a></li>
+                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
+                                    <li><a href="returnslip.php">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
