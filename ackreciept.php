@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Ubold - Responsive Admin Dashboard Template</title>
+        <title>Acknowledgement Reciept | Equipment</title>
 
         <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -44,7 +44,8 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
+                    <a href="index.php" class="logo"><i class="icon-c-logo"><img src="images/logo/pgso_logo_2.png" width="50" height="50"> </i><span><i><img class="company-logo" src="images/logo/pgso_logo_1.png" width="65" height="65"></i></span></a>
+
                     </div>
                 </div>
 
@@ -75,12 +76,15 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
+
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}} </a>
+
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
+                               
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
@@ -93,7 +97,23 @@
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
-                <div class="sidebar-inner slimscrollleft">
+                <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}} <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>                                    
+                                    <li><a href="#"><i class="md md-settings"></i> Settings</a></li>
+                                    <li><a href="javascript:;" logout-account><i class="md md-settings-power"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                            <p class="text-muted m-0">{{accountProfile.account_type}}</p>
+                        </div>
+                    </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
@@ -107,17 +127,17 @@
                                 </li>
                                <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
                             </li>
-                            <li class="has_sub">
+                            <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
-                                    <li><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
+                                    <li class="active"><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub">
+                            <li class="has_sub" ng-show="accountProfile.pages_access.report.value">
                                 <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
@@ -128,8 +148,8 @@
                                     <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span>Maintenance<span class="label label-success pull-right">10</span></a>
+                            <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
+                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span>Maintenance<span class="label label-success pull-right">9</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
@@ -142,12 +162,12 @@
                                     <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub">
-                                <a href="security.php" class="waves-effect"><i class="md md-vpn-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
+                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="javascript:;">Users</a></li>
+                                    <!-- <li><a href="javascript:;">Users</a></li> -->
                                     <li><a href="group.php">Group</a></li>
-                                    <li><a href="javascript:;">Privileges</a></li>
+                                    <li><a href="javascript:;">Users</a></li>
                                     <li><a href="javascript:;">Audit Trail</a></li>
                                 </ul>
                             </li>
@@ -166,12 +186,12 @@
                     <div class="container">
 
                         <!-- Page-Title -->
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="page-title">Equipment</h4>
                                 <p class="text-muted page-title-alt">Welcome to System</p>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="row">
                             <div class="col-sm-12">

@@ -1,4 +1,4 @@
-<?php include_once 'authentication.php'; ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,9 +9,9 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Personnel | Maintenance</title>
-        
-        <!-- DataTables -->
+        <title>Group</title>
+		
+		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -27,10 +27,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
+		
+		
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="personnel" ng-controller="personnelCtrl" account-profile>
+    <body class="fixed-left" ng-app="group" ng-controller="groupCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -67,13 +69,14 @@
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}} </a>
+
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}} </a>    
                                     <ul class="dropdown-menu">
                                         <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
-                               
+                                
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
@@ -119,7 +122,7 @@
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
-                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
+                                    <li><a href="javascript:;">Acknowledgement Receipt</a></li>
                                     <li><a href="javascript:;">Return Slip</a></li>
                                     <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
@@ -136,25 +139,25 @@
                                     <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
-                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">9</span></a>
+                            <li class="has_sub" ng-show="accountProfile.pages_access.security.value">
+                                <a href="#" class="waves-effect"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">9</span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
                                     <li><a href="model.php">Model</a></li>
-                                    <li class="active"><a href="personnel.php">Personnel</a></li>
+                                    <li><a href="personnel.php">Personnel</a></li>
                                     <li><a href="department.php">Department</a></li>
-                                    <li><a href="units.php">Units</a></li>
+                                    <li><a href="division.php">Division</a></li>
                                     <li><a href="type.php">Type</a></li>
-                                    <li><a href="supply.php">Supplier</a></li>
+                                    <li><a href="supplier.php">Supplier</a></li>
                                     <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect active"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
                                 <ul class="list-unstyled">
                                     <!-- <li><a href="javascript:;">Users</a></li> -->
-                                    <li><a href="group.php">Group</a></li>
+                                    <li class="active"><a href="group.php">Group</a></li>
                                     <li><a href="javascript:;">Users</a></li>
                                     <li><a href="javascript:;">Audit Trail</a></li>
                                 </ul>
@@ -174,12 +177,11 @@
                     <div class="container">
 
                         <!-- Page-Title -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                               <div class = "x_content" id="x_content"></div>
-                                <!-- it will display here -->
-                            </div>
-                        </div>
+						<div class="row">
+							<div class="col-lg-12">
+							   <div class = "x_content" id="x_content"> </div> <!-- it will display here -->
+							</div>
+						</div>
                     </div> <!-- container -->
                 </div> <!-- content -->
 
@@ -190,6 +192,8 @@
             </div>
         </div>
         <!-- END wrapper -->
+
+
 
         <script>
             var resizefunc = [];
@@ -207,7 +211,7 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
-        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
 
@@ -224,19 +228,19 @@
         <script src="assets/js/bootbox.min.js"></script>
         <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
-        <!-- blockui -->
-        <script src="modules/blockui/jquery.blockUI.js"></script>
-    
+		<!-- blockui -->
+		<script src="modules/blockui/jquery.blockUI.js"></script>
+	
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
-        <script src="modules/blockui/blockui.js"></script>
+		<script src="modules/blockui/blockui.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/personnel.js"></script>
-        <script src="controllers/personnel.js"></script>
+        <script src="modules/group.js"></script>
+        <script src="controllers/group.js"></script>
 
     </body>
 </html>
