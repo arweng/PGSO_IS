@@ -79,7 +79,7 @@ include_once 'authentication.php';
                                     
                                     <ul class="dropdown-menu">
 
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                                        <li><a href="profile-setting.php"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
@@ -102,14 +102,7 @@ include_once 'authentication.php';
                             <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
                         </div>
                         <div class="user-info">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}} <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>                                    
-                                    <li><a href="#"><i class="md md-settings"></i> Settings</a></li>
-                                    <li><a href="javascript:;" logout-account><i class="md md-settings-power"></i> Logout</a></li>
-                                </ul>
-                            </div>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}}</a>
                             <p class="text-muted m-0">{{accountProfile.account_type}}</p>
                         </div>
                     </div>
@@ -127,8 +120,8 @@ include_once 'authentication.php';
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
                                     <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
-                                    <li><a href="javascript:;">Return Slip</a></li>
-                                    <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
+                                    <li><a href="returnslip.php">Return Slip</a></li>
+                                    <li><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
                             </li>

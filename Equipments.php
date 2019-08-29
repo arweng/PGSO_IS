@@ -74,7 +74,7 @@
                                 <li class="dropdown">
                                     <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                                        <li><a href="profile-setting.php"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
@@ -94,7 +94,16 @@
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
-                <div class="sidebar-inner slimscrollleft">
+                <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{{accountProfile.picture}}" alt="user-img" class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{accountProfile.fullname}}</a>
+                            <p class="text-muted m-0">{{accountProfile.account_type}}</p>
+                        </div>
+                    </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
                         <ul>
@@ -108,8 +117,8 @@
                                     <ul class="list-unstyled">
                                         <li><a href="fill_equipment.php">Fill in Equipment</a></li>
                                         <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
-                                        <li><a href="javascript:;">Return Slip</a></li>
-                                        <li><a href="javascript:;">Re-property Acknowledgement Reciept</a></li>
+                                        <li><a href="returnslip.php">Return Slip</a></li>
+                                        <li><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
                                         <li><a href="javascript:;">Track Property</a></li>
                                     </ul>
                                 </li>

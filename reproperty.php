@@ -9,10 +9,13 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Brand | Maintenance</title>
-		
-		<!-- DataTables -->
+        <title>Ubold - Responsive Admin Dashboard Template</title>
+
+        <!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+        <!--Morris Chart CSS -->
+         <link rel="stylesheet" href="assets/plugins/morris/morris.css">
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -30,7 +33,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="brand" ng-controller="brandCtrl" account-profile>
+    <body class="fixed-left" ng-app="reproperty" ng-controller="repropertyCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -41,8 +44,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                    <a href="index.php" class="logo"><i class="icon-c-logo"><img src="images/logo/pgso_logo_2.png" width="50" height="50"> </i><span><i><img class="company-logo" src="images/logo/pgso_logo_1.png" width="65" height="65"></i></span></a>
-
+                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
                     </div>
                 </div>
 
@@ -57,23 +59,32 @@
                                 <span class="clearfix"></span>
                             </div>
 
+                            <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                                 <input type="text" placeholder="Search..." class="form-control">
+                                 <a href=""><i class="fa fa-search"></i></a>
+                            </form>
+ -->
+
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                                <!-- <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> {{accountProfile.fullname}} </a>
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="profile-setting.php"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
                                     </ul>
                                 </li>
-                                
+                                <li class="hidden-xs">
+                                    <br>
+                                    <span style="color: white;">{{accountProfile.fullname}}</span>
+                                </li>
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
@@ -103,19 +114,19 @@
                             <li class="text-muted menu-title">Navigation</li>
                             <li class="has_sub">
                                 <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
-                                    <ul class="list-unstyled">
+                                    <!-- <ul class="list-unstyled">
                                         <li><a href="#">Fill in Equipment</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
                             </li>
                             <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
                                 <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
-                                    <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
+                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
+                                    <li><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
                                     <li><a href="returnslip.php">Return Slip</a></li>
-                                    <li><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
+                                    <li class="active"><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
                                     <li><a href="javascript:;">Track Property</a></li>
                                 </ul>
                             </li>
@@ -131,9 +142,9 @@
                                 </ul>
                             </li>
                             <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
-                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">9</span></a>
+                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span>Maintenance<span class="label label-success pull-right">9</span></a>
                                 <ul class="list-unstyled">
-                                    <li class="active"><a href="brand.php">Brand</a></li>
+                                    <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
                                     <li><a href="model.php">Model</a></li>
                                     <li><a href="personnel.php">Personnel</a></li>
@@ -145,7 +156,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                                <a href="#" class="waves-effect"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
                                 <ul class="list-unstyled">
                                     <!-- <li><a href="javascript:;">Users</a></li> -->
                                     <li><a href="group.php">Group</a></li>
@@ -168,13 +179,13 @@
                     <div class="container">
 
                         <!-- Page-Title -->
-						<div class="row">
-							<div class="col-lg-12">
-							   <div class = "x_content" id="x_content"> </div> <!-- it will display here -->
-							</div>
-						</div>
-                    </div> <!-- container -->
-                </div> <!-- content -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class = "x_content" id="x_content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <footer class="footer text-right">
                    Copyright &copy; <?php echo date("Y"); ?>
@@ -202,7 +213,7 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
-		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
@@ -218,19 +229,17 @@
         <script src="assets/js/bootbox.min.js"></script>
         <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
-		<!-- blockui -->
-		<script src="modules/blockui/jquery.blockUI.js"></script>
-	
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
-		<script src="modules/blockui/blockui.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
         <script src="modules/validation/validate.js"></script>
         <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/brand.js"></script>
-        <script src="controllers/brand.js"></script>
+        <script src="modules/reproperty.js"></script>
+        <script src="controllers/reproperty.js"></script>
+
+        
 
     </body>
 </html>
