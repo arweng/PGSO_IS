@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>PGSO Inventory System | Fill Equipment</title>
+        <title>Fill Equipment | Equipment</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -226,7 +226,11 @@
         <script src="assets/js/bootbox.min.js"></script>
         <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
-		<!-- blockui -->
+        <!-- blockui -->
+        <script src="dist/jspdf.min.js"></script>
+        <script src="dist/jspdf.debug.js"></script>
+        <script src="dist/jspdf.plugin.autotable.js"></script>	
+        
 		<script src="modules/blockui/jquery.blockUI.js"></script>
 	
         <!-- Angular  -->

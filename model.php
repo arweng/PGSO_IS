@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>Model</title>
+        <title>Model | Maintenance</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -41,7 +41,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                    <a href="index.php" class="logo"><i class="icon-c-logo"><img src="images/logo/pgso_logo_2.png" width="50" height="50"> </i><span><i><img class="company-logo" src="images/logo/pgso_logo_1.png" width="65" height="65"></i></span></a>
+                    <a href="index.php" class="logo"><i class="icon-c-logo"><img src="images/logo/pgso_logo_2.png" width="70" height="70"> </i><span><i><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
 
                     </div>
                 </div>
@@ -86,6 +86,7 @@
             <!-- ========== Left Sidebar Start ========== -->
 
             <div class="left side-menu">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 704px;">
                 <div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 704px;">
                     <div class="user-details">
                         <div class="pull-left">
@@ -117,7 +118,7 @@
                                <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
                             </li>
                             <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
-                                <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
+                                <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment</a>
                                 <ul class="list-unstyled">
                                     <li><a href="fill_equipment.php" class="waves-effect">Fill in Equipment</a></li>
                                     <li><a href="javascript:;">Acknowledgement Receipt</a></li>
@@ -127,7 +128,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub" ng-show="accountProfile.pages_access.report.value">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
+                                <a href="#" class="waves-effect"><i class="ti-files"></i>Report</a>
                                 <ul class="list-unstyled">
                                     <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
                                     <li><a href="returnSlip_report.php">Property Return Slip</a></li>
@@ -138,7 +139,7 @@
                                 </ul>
                             </li>
                             <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
-                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">9</span></a>
+                                <a href="#" class="waves-effect active"><i class="ti-files"></i>Maintenance</a>
                                 <ul class="list-unstyled">
                                     <li><a href="brand.php">Brand</a></li>
                                     <li><a href="classification.php">Classification</a></li>
@@ -151,8 +152,8 @@
                                     <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                            <li class="has_sub" ng-show="accountProfile.pages_access.security.value">
+                                <a href="#" class="waves-effect"><i class="ti ti-key"></i>Security</a>
                                 <ul class="list-unstyled">
                                     <!-- <li><a href="javascript:;">Users</a></li> -->
                                     <li><a href="group.php">Group</a></li>
@@ -166,6 +167,8 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+        </div>
+         
             <!-- Left Sidebar End -->
 
 

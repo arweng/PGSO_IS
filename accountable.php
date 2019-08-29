@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>PGSO | Brand</title>
+        <title>Accountable Officer | Maintenance</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />

@@ -1379,6 +1379,7 @@ body.fixed-left .side-menu.left {
 #wrapper.enlarged .left.side-menu {
   width: 70px;
   z-index: 5;
+  padding-left: 5px;
 }
 #wrapper.enlarged .left.side-menu #sidebar-menu > ul > li > a {
   padding: 15px 20px;
@@ -1417,7 +1418,7 @@ body.fixed-left .side-menu.left {
   display: block;
   left: 70px;
   position: absolute;
-  width: 190px;
+  width: 450px;
 }
 #wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul a {
   background: #ffffff;

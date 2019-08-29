@@ -158,8 +158,8 @@ include_once 'authentication.php';
                                     <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                            <li class="has_sub" ng-show="accountProfile.pages_access.security.value">
+                                <a href="#" class="waves-effect"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
                                 <ul class="list-unstyled">
                                     <!-- <li><a href="javascript:;">Users</a></li> -->
                                     <li><a href="group.php">Group</a></li>

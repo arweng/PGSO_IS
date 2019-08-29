@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
-        <title>PGSO Inventory System</title>
+        <title>Units | Maintenance</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
@@ -153,8 +153,8 @@
                                     <li><a href="accountable.php">Accountable Officer</a></li>
                                 </ul>
                             </li>
-                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
+                            <li class="has_sub" ng-show="accountProfile.pages_access.security.value">
+                                <a href="#" class="waves-effect active"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
                                 <ul class="list-unstyled">
                                     <!-- <li><a href="javascript:;">Users</a></li> -->
                                     <li><a href="group.php">Group</a></li>
