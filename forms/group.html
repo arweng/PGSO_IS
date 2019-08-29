@@ -41,8 +41,10 @@
 	                    </div>
 	                </div>
 	            </div>
+	
 	            <div class="col-md-12">
 					<div class="panel" ng-repeat="p in privileges">
+					<br><br>
 						<div class="x_title">
 							<hr>
 							<label><i class="ti-pencil-alt"></i> {{p.description}}</label>
@@ -50,6 +52,7 @@
 							</ul>
 							<div class="clearfix"></div>
 						</div>
+						
 						<div class="row">		
 							<div class="col-md-3 form-group" ng-repeat="pp in p.privileges">
 								<label class="switch">
