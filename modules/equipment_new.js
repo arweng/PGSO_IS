@@ -117,7 +117,7 @@ angular.module('equipments-module',['bootstrap-growl','bootstrap-modal','form-va
                 }).then(function mySucces(response) {
                     
                     angular.copy(response.data, scope.input);
-                    scope.input.acquisition_date = new Date(res.data.acquisition_date);
+                    scope.input.acquisition_date = new Date(response.data.acquisition_date);
                 }, function myError(response) {
                      
                   // error
@@ -260,7 +260,7 @@ angular.module('equipments-module',['bootstrap-growl','bootstrap-modal','form-va
             doc.setFontSize(20)
 			doc.setFont('helvetica');
             doc.setFontType('bold');
-            doc.text(100, 8, 'INVENTORY OF PROPERTY, PLANT AND EQUIPMENT');
+            doc.text(100, 10, 'INVENTORY OF PROPERTY, PLANT AND EQUIPMENT');
 
             doc.setFontSize(10)
             doc.setFont('helvetica');
@@ -277,7 +277,7 @@ angular.module('equipments-module',['bootstrap-growl','bootstrap-modal','form-va
             doc.setFontSize(10)
             doc.setFont('helvetica');
             doc.text(318,24, months[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear());
-            doc.text(318,24, '_____________');
+            doc.text(318,24, '_______________');
 
             doc.setFontSize(8)
             doc.setFont('helvetica');

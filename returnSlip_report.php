@@ -10,9 +10,9 @@ $sub="reports";
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+        <link rel="shortcut icon" href="assets/images/pgso_logo_1.jpg">
 
-        <title>Property Slip Report | Report</title>
+        <title> Reports | Property Return Slip Report</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />

@@ -10,9 +10,9 @@ $sub="maintenance";
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="assets/images/favicon_1.ico">
+        <link rel="shortcut icon" href="assets/images/pgso_logo_1.jpg">
 
-        <title>Supplier | Maintenance</title>
+        <title> Maintenance | Suppliers</title>
 		
 		<!-- DataTables -->
         <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
