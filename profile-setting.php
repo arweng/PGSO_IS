@@ -44,7 +44,7 @@ $sub="index";
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="index.php" class="logo"><i class="icon-magnet icon-c-logo"></i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="70" height="70"></i></span></a>
+                        <a href="index.php" class="logo"><i class="icon-c-logo"><img src="images/logo/pgso_logo_2.png" width="50" height="50"> </i><span><img class="company-logo" src="images/logo/pgso_logo_1.png" width="65" height="65"></i></span></a>
                     </div>
                 </div>
 
