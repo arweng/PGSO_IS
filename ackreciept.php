@@ -1,4 +1,7 @@
-<?php include_once 'authentication.php'; ?>
+<?php 
+include_once 'authentication.php';
+$sub="equipments";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -67,11 +70,11 @@
  -->
 
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                                <!-- <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
@@ -109,62 +112,7 @@
                     </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
-                        <ul>
-
-                            <li class="text-muted menu-title">Navigation</li>
-                            <li class="has_sub">
-                                <li><a href="index.php" class="waves-effect "><i class="ti-home"></i><span> Dashboard </span></a>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Fill in Equipment</a></li>
-                                    </ul>
-                                </li>
-                               <!--  <li><a href="Equipments.php" class="waves-effect"><i class="ti-file"></i><span> Equipment </span></a></li> -->
-                            </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
-                                <a href="#" class="waves-effect"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="fill_equipment.php" class="waves-effect active">Fill in Equipment</a></li>
-                                    <li class="active"><a href="ackreciept.php" ng-click="myEquipment.ackreciept(this)">Acknowledgement Receipt</a></li>
-                                    <li><a href="returnslip.php">Return Slip</a></li>
-                                    <li><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
-                                    <li><a href="javascript:;">Track Property</a></li>
-                                </ul>
-                            </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.report.value">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
-                                    <li><a href="returnSlip_report.php">Property Return Slip</a></li>
-                                    <li><a href="javascript:;">Inventory of Equipment</a></li>
-                                    <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
-                                    <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
-                                    <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
-                                </ul>
-                            </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i> <span>Maintenance<span class="label label-success pull-right">9</span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="brand.php">Brand</a></li>
-                                    <li><a href="classification.php">Classification</a></li>
-                                    <li><a href="model.php">Model</a></li>
-                                    <li><a href="personnel.php">Personnel</a></li>
-                                    <li><a href="department.php">Department</a></li>
-                                    <li><a href="units.php">Units</a></li>
-                                    <li><a href="type.php">Type</a></li>
-                                    <li><a href="supply.php">Supplier</a></li>
-                                    <li><a href="accountable.php">Accountable Officer</a></li>
-                                </ul>
-                            </li>
-                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
-                                <ul class="list-unstyled">
-                                    <!-- <li><a href="javascript:;">Users</a></li> -->
-                                    <li><a href="group.php">Group</a></li>
-                                    <li><a href="javascript:;">Users</a></li>
-                                    <li><a href="javascript:;">Audit Trail</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <?php require_once 'main-menu-navigation.php'?>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
@@ -178,40 +126,16 @@
                 <div class="content">
                     <div class="container">
 
-                        <!-- Page-Title -->
-                        <!-- <div class="row">
-                            <div class="col-sm-12">
-                                <h4 class="page-title">Equipment</h4>
-                                <p class="text-muted page-title-alt">Welcome to System</p>
-                            </div>
-                        </div> -->
                         
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="card-box">
-                                    <div>
-                                        <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)">Add</button> -->
-                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button> -->                                                    
-                                                <!-- <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button> -->
-                                    </div>
-                                            <br>
-                                            <div id="content"></div>
-                                        
-<!-- 
-                                        <div class="tab-pane" id="temp_2">
-                                            <div id="AR_form"></div> -->
-                                       
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                           <!--  <div class = "a_content" id="a_content"> </div> -->
-                                        </div>
+                                <div id="content"></div>
+                                <div class="row">
+                                    <div class="col-md-6">
                                     </div>
                                 </div>
-                            </div>
-                        </div><!-- row -->
-                    </div> <!-- container -->
+                            </div><!-- row -->
+                        </div> <!-- container -->
                 </div> <!-- content -->
 
                 <footer class="footer text-right">

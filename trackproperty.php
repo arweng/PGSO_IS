@@ -1,4 +1,7 @@
-<?php include_once 'authentication.php'; ?>
+<?php 
+include_once 'authentication.php';
+$sub="equipments";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,6 +13,9 @@
         <link rel="shortcut icon" href="assets/images/favicon_1.ico">
 
         <title>Ubold - Responsive Admin Dashboard Template</title>
+
+        <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
         <!--Morris Chart CSS -->
          <link rel="stylesheet" href="assets/plugins/morris/morris.css">
@@ -30,7 +36,7 @@
 
         <script src="assets/js/modernizr.min.js"></script>
     </head>
-    <body class="fixed-left" ng-app="equipments" ng-controller="equipmentCtrl" account-profile>
+    <body class="fixed-left" ng-app="trackproperty" ng-controller="trackpropertyCtrl" account-profile>
 
         <!-- Begin page -->
         <div id="wrapper">
@@ -59,20 +65,20 @@
                             <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
                                  <input type="text" placeholder="Search..." class="form-control">
                                  <a href=""><i class="fa fa-search"></i></a>
-                            </form> -->
-
+                            </form>
+ -->
 
                             <ul class="nav navbar-nav navbar-right pull-right">
-                                <li class="dropdown hidden-xs">
+                                <!-- <li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="true">
                                         <i class="icon-bell"></i> <span class="badge badge-xs badge-danger">3</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="hidden-xs">
                                     <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="icon-size-fullscreen"></i></a>
                                 </li>
                                 <li class="dropdown">
-                                    <!-- <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a> -->
+                                    <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{accountProfile.picture}}" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="profile-setting.php"><i class="ti-settings m-r-5"></i> Settings</a></li>
                                         <li><a href="javascript:;" logout-account><i class="ti-power-off m-r-5"></i> Logout</a></li>
@@ -106,58 +112,7 @@
                     </div>
                     <!--- Divider -->
                     <div id="sidebar-menu">
-                        <ul>
-
-                            <li class="text-muted menu-title">Navigation</li>
-                                <li><a href="index.php" class="waves-effect"><i class="ti-home"></i><span> Dashboard </span></a>
-                                </li>
-                                <!-- <li class="has_sub"><a href="Equipments.php" class="waves-effect active"><i class="ti-file"></i><span>Equipment</span></a>  -->  
-                                <li class="has_sub" ng-show="accountProfile.pages_access.equipment.value">
-                                    <a href="Equipments.php" class="waves-effect active"><i class="ti-write"></i>Equipment<span class="label label-success pull-right">5</span></a>
-                                    <ul class="list-unstyled">
-                                        <li><a href="fill_equipment.php">Fill in Equipment</a></li>
-                                        <li><a href="ackreciept.php">Acknowledgement Receipt</a></li>
-                                        <li><a href="returnslip.php">Return Slip</a></li>
-                                        <li><a href="reproperty.php">Re-property Acknowledgement Reciept</a></li>
-                                        <li><a href="javascript:;">Track Property</a></li>
-                                    </ul>
-                                </li>
-                                 <li class="has_sub" ng-show="accountProfile.pages_access.report.value">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i>Report<span class="label label-success pull-right">6</span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="PAR_report.php">Property Acknowledgement Receipt</a></li>
-                                    <li><a href="returnSlip_report.php">Property Return Slip</a></li>
-                                    <li><a href="javascript:;">Inventory of Equipment</a></li>
-                                    <li><a href="javascript:;">Summary of Newly Acquired Equipment</a></li>
-                                    <li><a href="javascript:;">Inventory Reconcilation Under Property, Plant And Equipment</a></li>
-                                    <li><a href="javascript:;">Property, Plant and Equipment Schedule</a></li>
-                                </ul>
-                            </li>
-                            <li class="has_sub" ng-show="accountProfile.pages_access.maintenance.value">
-                                <a href="#" class="waves-effect"><i class="ti-files"></i>Maintenance<span class="label label-success pull-right">9</span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="brand.php">Brand</a></li>
-                                    <li><a href="classification.php">Classification</a></li>
-                                    <li><a href="model.php">Model</a></li>
-                                    <li><a href="personnel.php">Personnel</a></li>
-                                    <li><a href="department.php">Department</a></li>
-                                    <li><a href="units.php">Units</a></li>
-                                    <li><a href="type.php">Type</a></li>
-                                    <li><a href="supply.php">Supplier</a></li>
-                                    <li><a href="accountable.php">Accountable Officer</a></li>
-                                </ul>
-                            </li>
-                            <li class="has_sub active" ng-show="accountProfile.pages_access.security.value">
-                                <a href="#"><i class="ti ti-key"></i>Security<span class="label label-success pull-right">4</span></a>
-                                <ul class="list-unstyled">
-                                    <!-- <li><a href="javascript:;">Users</a></li> -->
-                                    <li><a href="group.php">Group</a></li>
-                                    <li><a href="javascript:;">Users</a></li>
-                                    <li><a href="javascript:;">Audit Trail</a></li>
-                                </ul>
-                            </li>
-                            </li>
-                        </ul>
+                        <?php require_once'main-menu-navigation.php'?>
                         <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"></div>
@@ -174,54 +129,11 @@
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="page-title">Equipment</h4>
-                                <p class="text-muted page-title-alt">Welcome to System</p>
+                                <div class = "x_content" id="x_content"></div>
                             </div>
                         </div>
-                        
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card-box">
-
-                                    <div class="tab-content">
-                                        <!-- INFORMATION HERE -->
-                                        <div class="tab-pane active" id="add_form">
-                                            <div>
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.equipAdd(this)" ng-disabled="btns.add">Add</button>
-
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.add(this)" id="add" ng-disabled="btns.multiple">Add Forms</button>
-                                                    
-                                                <button class="btn btn-info waves-effect waves-light btn-sm" ng-click="myEquipment.multiple.remove(this)" id="remove" ng-disabled="btns.multiple">Remove</button>
-                                            </div>
-                                            <br>
-
-                                            <div id="content"></div>
-                                        </div>
-
-                                        <div class="tab-pane" id="temp_2">
-                                            <div id="AR_form"></div>
-                                        </div>
-                                        <div class="tab-pane" id="temp_3">
-                                            Hi
-                                        </div>
-                                        <div class="tab-pane" id="temp_4">
-                                            Fuck you
-                                        </div>
-                                        <div class="tab-pane" id="temp_5">
-                                            Ow yeah
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class = "a_content" id="a_content"> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- row -->
-                    </div> <!-- container -->
-                </div> <!-- content -->
+                    </div>
+                </div>
 
                 <footer class="footer text-right">
                    Copyright &copy; <?php echo date("Y"); ?>
@@ -249,6 +161,8 @@
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
 
         <!-- jQuery  -->
         <script src="assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
@@ -261,16 +175,19 @@
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
         <script src="assets/js/bootbox.min.js"></script>
+        <script src="modules/growl/jquery.bootstrap-growl.js"></script>
         
         <!-- Angular  -->
         <script src="angular/angular.min.js"></script>
         <script src="modules/fullscreen.js"></script>
         <script src="modules/bootstrap-modal.js"></script>
+        <script src="modules/validation/validate.js"></script>
+        <script src="modules/growl/growl.js"></script>
         <script src="modules/account.js"></script>
-        <script src="modules/equipment_new.js"></script>
-        <script src="controllers/equipment.js"></script>
+        <script src="modules/trackproperty.js"></script>
+        <script src="controllers/trackproperty.js"></script>
 
-
+        
 
     </body>
 </html>

@@ -1409,9 +1409,11 @@ body.fixed-left .side-menu.left {
   position: relative;
   white-space: nowrap;
 }
+
+/*Hover side bar menu*/
 #wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > a {
   position: relative;
-  width: 260px;
+  width: 520px;
   background: #f4f8fb;
 }
 #wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul {
@@ -1420,6 +1422,8 @@ body.fixed-left .side-menu.left {
   position: absolute;
   width: 450px;
 }
+/*End of hover left side bar*/
+
 #wrapper.enlarged .left.side-menu #sidebar-menu ul > li:hover > ul a {
   background: #ffffff;
   box-shadow: none;

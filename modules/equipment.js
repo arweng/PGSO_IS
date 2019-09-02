@@ -22,6 +22,19 @@ function stocks(){
 		self.listOfEquipment(scope);
 
 	};
+	function model(scope) {
+
+		$http({
+		  method: 'POST',
+		  url: 'api/suggestions/model.php',
+		}).then(function mySucces(response) {
+			
+			scope.types = response.data;
+			
+		}, function myError(response) {
+			 
+		});
+	};
 
 	function validate(scope) { 	//validation
 			
@@ -44,7 +57,7 @@ function stocks(){
 
 		$http({
 
-			url:'handlers/equipment.php',
+			url:'handlers/fillequip/equipment.php',
 			method:'GET',
 		}).then(function onSuccess(res){
 
@@ -86,6 +99,7 @@ function stocks(){
 			$compile($("#content")[0])(scope);
 
 		});
+		model(scope);
 
 	};
 
@@ -124,7 +138,7 @@ function stocks(){
 
 			$http({
 
-				url: "handlers/equipSave.php",
+				url: "handlers/fillequip/equipSave.php",
 				method: "POST",
 				data: multingle
 			}).then(function onSuccess(res){
@@ -146,7 +160,7 @@ function stocks(){
 
 		$http({
 
-			url: "handlers/equipEdit.php",
+			url: "handlers/fillequip/equipEdit.php",
 			method: "POST",
 			data: {id: input.id}
 		}).then(function success(res){
@@ -173,7 +187,7 @@ function stocks(){
 
 		$http({
 
-			url:"handlers/equipDelete.php",
+			url:"handlers/fillequip/equipDelete.php",
 			method:'POST',
 			data:{id:[input.id]}
 
