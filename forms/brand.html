@@ -30,6 +30,14 @@
 						<input type="text" class="form-control" name="brandName" ng-model="brand.brandName" ng-disabled="controls.ok.btn" required>
 						<span class="help-block" ng-show="formHolder.brand.brandName.$touched && formHolder.brand.brandName.$invalid">This field is required</span>
 					</div>
+
+				<!-- 	<div class="form-group">
+						<label class="col-sm-5 control-label">Empty text field, required</label>
+						<div class="col-sm-7">
+							<a href="#" id="inline-firstname" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Enter your firstname" class="editable editable-click editable-empty" style="display: inline-block;">Empty</a>
+						</div>
+					</div> -->
+
 				</div>
 				<div class="form-group" ng-class="{'has-error': formHolder.brand.description.$touched && formHolder.brand.description.$invalid}">
 					 <div class="col-md-4">

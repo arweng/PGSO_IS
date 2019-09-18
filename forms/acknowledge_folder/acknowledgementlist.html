@@ -17,7 +17,7 @@
 <div class="panel panel-border panel-primary">
     <div class="panel-heading">
         <h4><i class="icon icon-note"></i> Form
-        <button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button>
+        <!-- <button type="submit" class="btn btn-white waves-effect waves-light pull-right" ng-click="form.edit(this)"><i class="fa" ng-class="{'fa-edit': controls.ok.btn, 'fa-ban': !controls.ok.btn}"></i></button> -->
         </h4>
     </div>
     <hr>
@@ -39,7 +39,9 @@
         <td>{{u.description}}</td>
         <td>{{u.model}}</td>
         <td>
-          <button ng-click="checked.push(this.u);" class="btn btn-success btn-custom waves-effect waves-light" ng-disabled="ackreciept.disableBtn(this,u)"><i class="glyphicon glyphicon-plus"></i></button>
+          <div class=' col-lg-3'>
+          <button ng-click="checked.push(this.u)" class="btn btn-success btn-custom waves-effect waves-light" ng-disabled="ackreciept.disableBtn(this,u)"><i class="glyphicon glyphicon-plus-sign"></i></button>
+        </div>
         </td>
       </tr>
     </tbody>
@@ -47,6 +49,7 @@
 </div>
 
 <div class="row">
+
 	<div class="col-lg-5">
     <div class="table-responsive">
       <table id=onCartTable class="table table-bordered table-striped m-0">
@@ -67,7 +70,7 @@
 	<div class="col-lg-7">
 		<div class="table-responsive">
       <div class="col-lg-6">
-        GSO No. <input class="form-control" type="text" name="name">
+       <!--  GSO No. <input class="form-control" type="text" ng-value="ackreciept.selfgenerate(result)" name="name" disabled=""> -->
         Recipient <input class="form-control" type="text" name="name">
         Date <input class="form-control" type="date" name="name">
       </div>

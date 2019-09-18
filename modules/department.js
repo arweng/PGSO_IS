@@ -130,7 +130,7 @@ function form(){
 		scope.controls.ok.btn = !scope.controls.ok.btn;
 		
 	};
-		
+	
 	self.save = function(scope) {
 		
 		if (validate(scope)){ 

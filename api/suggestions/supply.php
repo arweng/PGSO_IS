@@ -9,9 +9,9 @@ session_start();
 
 $con = new pdo_db();
 
-$models = $con->getData("SELECT * FROM model");
+$supply = $con->getData("SELECT * FROM supplier");
 
 header("Content-Type: application/json");
-echo json_encode($models);
+echo json_encode($supply);
 
 ?>

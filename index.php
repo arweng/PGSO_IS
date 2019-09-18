@@ -131,18 +131,22 @@ $sub = 'index';
                                 <p class="text-muted page-title-alt">Welcome to System</p>
                             </div>
                         </div>
+
+                        <?php require 'dashboard.html' ?>
 						
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-sm-12">
 								<div class="card-box">
 									<div class="row">
 										<div class="col-md-6">
-											<div class = "content"> </div>
+											<div class = "content">
+                                                
+                                            </div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div><!-- row -->
+						</div> -->
                     </div> <!-- container -->
                 </div> <!-- content -->
 

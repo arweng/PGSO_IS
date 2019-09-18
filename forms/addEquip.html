@@ -44,11 +44,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Model</label>
                         <div class="col-md-8">
-                            <div class= "input-group" data-placement="top" data-align="top">
-                                <!-- <select class="form-control" name="model" ng-model="input.model_id" ng-disabled="controls.ok.btn" ng-options="data.model for data in model track by data.id" required></select> -->
-                                <input type="text" class="form-control" name="model" ng-model="input.model" ng-class="{'parsley-error': formHolder.input.model.$touched && formHolder.input.model.$invalid}" ng-disabled = "controls.ok.btn" required>
-                                <span class="input-group-addon"><button type="button" class ="btn btn-info waves-effect waves-light btn-xs" ng-click="myEquipment.sample(this)"><i class="fa fa-plus square"></i></button></span>
-                            </div>
+                            <select class="form-control" name="model" ng-model="input.model" ng-class="{'parsley-error': formHolder.input.description.$touched && formHolder.input.description.$invalid}" ng-disabled="controls.ok.btn" ng-options="data.model for data in models track by data.id" required></select>
                             <span class="text-danger" ng-show="formHolder.input.model.$touched && formHolder.input.model.$invalid"> Please Indicate Model</span>            
                         </div>
                     </div>                  
@@ -110,10 +106,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Supplier</label>
                         <div class="col-md-8">
-                            <div class= "input-group" data-placement="top" data-align="top">
-                                <input type="text" class="form-control" name="supplier" ng-model="input.supplier" ng-class="{'parsley-error': formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid}" ng-disabled = "controls.ok.btn" required>
-                                <span class="input-group-addon"><button type="button" class ="btn btn-info waves-effect waves-light btn-xs"><i class="fa fa-plus square"></i></button></span>
-                            </div>
+                            <select class="form-control" name="supply" ng-model="input.supplier" ng-class="{'parsley-error': formHolder.input.description.$touched && formHolder.input.description.$invalid}" ng-disabled="controls.ok.btn" ng-options="data.supplier_name for data in supplies track by data.id" required></select>
                             <span class="text-danger" ng-show="formHolder.input.supplier.$touched && formHolder.input.supplier.$invalid"> Please Indicate Supplier</span>            
                         </div>
                     </div>

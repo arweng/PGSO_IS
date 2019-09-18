@@ -29,6 +29,7 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 			}).then(function success(res){
 
 				scope.ackinputs = res.data;
+				
 			}, function error(res){
 
 				//error
@@ -48,10 +49,6 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 				},200);
 				
 			});
-			// $.extend( $.fn.dataTable.defaults, {
-			//     searching: false,
-			//     ordering:  false
-			// } );
 
 			$timeout(function() {
 				$('#onCartTable').DataTable({
@@ -70,6 +67,8 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 		};
 
+
+
 		self.disableBtn = function(scope,u){
 
 			console.log(scope.checked.indexOf(u));
@@ -80,6 +79,20 @@ angular.module('acknowledge-module',['bootstrap-growl','bootstrap-modal']).facto
 
 			scope.addtocart.btnAdd = false;
 			scope.checked.splice(index,1)
+		}
+
+		self.selfgenerate = function(result){
+
+			var result = '';
+			var date = new Date().getFullYear();
+			var convert=date.toString();
+		    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		    
+		    var charactersLength = characters.length;
+		    for ( var i = 0; i <= 2; i++ ) {
+		       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+		    }
+		    return convert.concat('-',result);
 		}
 	};
 

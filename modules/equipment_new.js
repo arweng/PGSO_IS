@@ -28,7 +28,35 @@ angular.module('equipments-module',['bootstrap-growl','bootstrap-modal','form-va
             
     
         };
+
+        function model(scope) {
+
+            $http({
+              method: 'POST',
+              url: 'api/suggestions/model.php',
+            }).then(function mySucces(response) {
+                
+                scope.models = response.data;
+                
+            }, function myError(response) {
+                 
+            });
+        };
         
+        function supply(scope) {
+
+            $http({
+              method: 'POST',
+              url: 'api/suggestions/supply.php',
+            }).then(function mySucces(response) {
+                
+                scope.supplies = response.data;
+                
+            }, function myError(response) {
+                 
+            });
+        };
+
         self.list = function(scope) {
                 
             bui.show();
@@ -124,6 +152,9 @@ angular.module('equipments-module',['bootstrap-growl','bootstrap-modal','form-va
                     
                 });					
             };
+
+            model(scope);
+            supply(scope);
         
         };
         
